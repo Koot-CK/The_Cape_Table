@@ -88,7 +88,7 @@
     position:sticky; top:0; z-index:20;
     background:var(--bg);
     border-bottom:1px solid var(--border);
-    padding:0.9rem 1rem 0;
+    padding:calc(0.9rem + env(safe-area-inset-top, 0px)) 1rem 0;
   }
   .title-row{ padding-right:7.2rem; }
   .title-row h1{
@@ -138,7 +138,7 @@
   .panel.active{ display:block; }
 
   .progress-wrap{
-    position:sticky; top:64px; z-index:15;
+    position:sticky; top:calc(64px + env(safe-area-inset-top, 0px)); z-index:15;
     background:var(--bg);
     padding:0.7rem 0 0.6rem;
     display:flex; align-items:center; gap:0.7rem;
@@ -175,7 +175,7 @@
 
   section.group{ margin-bottom:1.4rem; }
   h2.group-title{
-    position:sticky; top:110px; z-index:10;
+    position:sticky; top:calc(110px + env(safe-area-inset-top, 0px)); z-index:10;
     background:var(--bg);
     font-size:0.72rem;
     text-transform:uppercase;
@@ -329,7 +329,7 @@
     position:sticky; top:0; z-index:20;
     background:var(--bg);
     border-bottom:1px solid var(--border);
-    padding:1rem 1rem 0.9rem;
+    padding:calc(1rem + env(safe-area-inset-top, 0px)) 1rem 0.9rem;
   }
   .home-brand{ display:flex; align-items:center; gap:0.7rem; margin-bottom:0.85rem; }
   .home-icon{ width:2.6rem; height:2.6rem; border-radius:0.65rem; display:block; }
@@ -406,7 +406,7 @@
     background:var(--accent-soft);
     border:none; border-radius:99px;
     padding:0.45rem 1.15rem 0.45rem 0.95rem;
-    position:absolute; top:0.9rem; right:1rem; z-index:1;
+    position:absolute; top:calc(0.9rem + env(safe-area-inset-top, 0px)); right:1rem; z-index:1;
     cursor:pointer;
   }
   :root[data-theme="dark"] .back-to-menu{ color:var(--accent); }

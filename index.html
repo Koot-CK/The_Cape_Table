@@ -388,6 +388,15 @@
   .recipe-card-meta{ font-size:0.8rem; color:var(--text-muted); }
   .recipe-card-meta .stars{ color:var(--accent); }
   .recipe-card-chevron{ font-size:1.4rem; color:var(--text-muted); }
+  .new-badge{
+    font-size:0.66rem; font-weight:700; text-transform:uppercase;
+    letter-spacing:0.05em;
+    padding:0.2rem 0.5rem;
+    border-radius:99px;
+    background:var(--accent);
+    color:var(--accent-ink);
+    white-space:nowrap;
+  }
 
   .empty-state{ text-align:center; color:var(--text-muted); font-size:0.9rem; padding:2rem 1rem; }
 
@@ -474,6 +483,7 @@
           <span class="recipe-card-title">Soft Sweet Vetkoek &amp; Old-School Sweet Curry Mince</span>
           <span class="recipe-card-meta">Yield 8 &middot; <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> &middot; Ease 6/10</span>
         </span>
+        <span class="new-badge" data-new-badge hidden>New</span>
         <span class="recipe-card-chevron" aria-hidden="true">&rsaquo;</span>
       </button>
       <button type="button" class="recipe-card" data-open="sago" data-categories="puddings" data-search="baked sago pudding apricot jam meringue sagopoeding appelkooskonfyt dessert pudding">
@@ -482,6 +492,7 @@
           <span class="recipe-card-title">Baked Sago Pudding with Apricot Jam &amp; Meringue</span>
           <span class="recipe-card-meta">Yield 6 &middot; <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> &middot; Ease 6/10</span>
         </span>
+        <span class="new-badge" data-new-badge hidden>New</span>
         <span class="recipe-card-chevron" aria-hidden="true">&rsaquo;</span>
       </button>
     </div>
@@ -934,11 +945,11 @@
     <section class="group">
       <h2 class="group-title">Baking Aisle</h2>
       <ul class="list">
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="sago"><span class="row-text">Sago pearls <span class="qty">&mdash; 190 g</span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="sago"><span class="row-text">Sago pearls <span class="qty">&mdash; 140 g</span></span></label></li>
         <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="whitesugar"><span class="row-text">White sugar <span class="qty">&mdash; 50 g</span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="castersugar"><span class="row-text">Caster sugar <span class="qty">&mdash; 200 g*</span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="cornflour"><span class="row-text">Cornflour <span class="qty">&mdash; 10 g*</span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="tartar"><span class="row-text">Cream of tartar <span class="qty">&mdash; 2 g*</span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="castersugar"><span class="row-text">Caster sugar <span class="qty">&mdash; 200 g</span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="cornflour"><span class="row-text">Cornflour <span class="qty">&mdash; 10 g</span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="tartar"><span class="row-text">Cream of tartar <span class="qty">&mdash; 2 g</span></span></label></li>
         <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="vanilla"><span class="row-text">Vanilla extract <span class="qty">&mdash; 5 ml</span></span></label></li>
         <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="salt"><span class="row-text">Salt <span class="qty">&mdash; 1.5 g</span></span></label></li>
       </ul>
@@ -947,11 +958,10 @@
     <section class="group">
       <h2 class="group-title">Sauces, Condiments &amp; Preserves</h2>
       <ul class="list">
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="jam"><span class="row-text">Apricot jam <span class="qty">&mdash; 180 g*</span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="jam"><span class="row-text">Apricot jam <span class="qty">&mdash; 180 g</span></span></label></li>
       </ul>
     </section>
 
-    <p class="note-row">* Not specified in the source recipe &mdash; these are proposed starting amounts. Adjust to taste once you&rsquo;ve made it a first time.</p>
   </section>
 
   <!-- COOK TAB -->
@@ -993,7 +1003,7 @@
         <div class="step-num">1</div>
         <div class="step-body">
           <div class="step-title">Soak the sago</div>
-          <div class="step-text">Rinse 190 g sago pearls under cold water, then cover with cold water and soak for 1 hour. Drain well through a fine sieve. Don&rsquo;t skip this &mdash; unsoaked sago cooks unevenly, with a harder centre in some pearls. Start this first &mdash; everything else can happen while it soaks.</div>
+          <div class="step-text">Rinse 140 g sago pearls under cold water, then cover with cold water and soak for 1 hour. Drain well through a fine sieve. Don&rsquo;t skip this &mdash; unsoaked sago cooks unevenly, with a harder centre in some pearls. Start this first &mdash; everything else can happen while it soaks.</div>
         </div>
         <div class="step-check"><input type="checkbox" data-store="cook" data-key="p1"></div>
       </div>
@@ -1070,7 +1080,7 @@
         <div class="step-num">4</div>
         <div class="step-body">
           <div class="step-title">First bake &mdash; set the custard <span class="chip">Check</span></div>
-          <div class="step-text">Pour into the buttered dish (from Prep) and set inside the roasting pan. Pour hot water from the kettle into the roasting pan until it comes about halfway up the sides of the pudding dish. Bake at the preheated 160&deg;C for 30 minutes (large dish) or about 20 minutes (ramekins), until set at the edges but still gently wobbling across the centre &mdash; not sunken-liquid, not fully firm. It keeps setting from residual heat and through the second bake, so pulling it here rather than at fully firm is what protects it from turning rubbery.</div>
+          <div class="step-text">Pour into the buttered dish (from Prep) and set inside the roasting pan. Pour hot water from the kettle into the roasting pan until it comes about halfway up the sides of the pudding dish. Bake at the preheated 160&deg;C for 30 minutes (large dish) or about 20 minutes (ramekins). Check doneness two ways: it should give a gentle, even wobble across the centre when nudged (not sunken-liquid, not fully firm), and an instant-read thermometer at the centre should read roughly 82&ndash;85&deg;C. Sago's cloudiness can hide the wobble, so if it hits temperature before it looks set, trust the thermometer. It keeps setting from residual heat and through the second bake, so pulling it here rather than at fully firm is what protects it from turning rubbery.</div>
         </div>
         <div class="step-check"><input type="checkbox" data-store="cook" data-key="sg4"></div>
       </div>
@@ -1121,6 +1131,12 @@
       <div class="card" style="margin-top:0.9rem;">
         <h3>What a properly finished bake looks like</h3>
         <p>Meringue peaks deep golden brown, crisp outside and soft within. Custard set at the edges with a gentle give in the centre when spooned &mdash; not runny, not rubbery.</p>
+      </div>
+      <div class="card" style="margin-top:0.9rem;">
+        <h3>Variation: Meringue Skin Topping (optional)</h3>
+        <p>Instead of the piped, spongy meringue above, you can finish with a thin glossy skin over the jam. Three changes from the method: far less sugar, softer peaks, and a thin spread instead of a piped mound.</p>
+        <p>Whisk the 4 reserved egg whites with a pinch of cream of tartar until foamy, then add only <strong>20&ndash;30 g caster sugar</strong> &mdash; just enough to stabilise the foam, not to build volume. Whip to <strong>soft-to-medium peaks</strong> only, then <strong>spread thinly</strong> (2&ndash;4 mm) right to the edges to seal the jam, rather than piling or piping. Bake as before but check earlier &mdash; a thin layer sets in about 8&ndash;10 minutes rather than 15&ndash;20 &mdash; or finish with a blowtorch instead of a second oven bake for a closer-to-true skin.</p>
+        <p>This version is more fragile than the full meringue, so lean harder on the cornflour dusting to stop it weeping against the jam, and serve it fairly soon after finishing rather than making it well ahead.</p>
       </div>
     </section>
 
@@ -1192,16 +1208,48 @@
   var homeView = document.getElementById('home-view');
   var recipeViews = document.querySelectorAll('.recipe-view');
 
+  var OPENED_KEY = 'capetable-opened-recipes-v1';
+  function getOpenedSet(){ return safeGet(OPENED_KEY); }
+  function markOpened(slug){
+    var opened = getOpenedSet();
+    if(!opened[slug]){
+      opened[slug] = true;
+      safeSet(OPENED_KEY, opened);
+    }
+  }
+  function refreshNewBadges(){
+    var opened = getOpenedSet();
+    document.querySelectorAll('.recipe-card').forEach(function(card){
+      var badge = card.querySelector('[data-new-badge]');
+      if(badge){ badge.hidden = !!opened[card.dataset.open]; }
+    });
+  }
+
+  // Alphabetical by title, every load -- so new recipes added later
+  // fall into place with no manual reordering.
+  var recipeGrid = document.getElementById('recipe-grid');
+  if(recipeGrid){
+    var sortedCards = Array.prototype.slice.call(recipeGrid.querySelectorAll('.recipe-card'));
+    sortedCards.sort(function(a, b){
+      var ta = a.querySelector('.recipe-card-title').textContent.trim().toLowerCase();
+      var tb = b.querySelector('.recipe-card-title').textContent.trim().toLowerCase();
+      return ta.localeCompare(tb);
+    });
+    sortedCards.forEach(function(card){ recipeGrid.appendChild(card); });
+  }
+
   function openRecipe(slug){
     homeView.classList.remove('active');
     recipeViews.forEach(function(el){ el.classList.remove('active'); });
     var target = document.getElementById('recipe-' + slug);
     if(target){ target.classList.add('active'); }
+    markOpened(slug);
     window.scrollTo({top:0, behavior:'instant'});
   }
   function goHome(){
     recipeViews.forEach(function(el){ el.classList.remove('active'); });
     homeView.classList.add('active');
+    refreshNewBadges();
     window.scrollTo({top:0, behavior:'instant'});
   }
 
@@ -1335,6 +1383,7 @@
   }
 
   recipeViews.forEach(initRecipeView);
+  refreshNewBadges();
 })();
 </script>
 

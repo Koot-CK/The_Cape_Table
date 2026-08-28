@@ -170,6 +170,14 @@
     cursor:pointer;
   }
   .reset-btn:hover{ color:var(--text); }
+  .reset-btn[data-subst-toggle][aria-pressed="true"]{
+    background:var(--accent-soft); border-color:var(--accent); color:var(--accent-ink);
+  }
+  .subst-note{
+    display:block; font-size:0.78rem; color:var(--text-muted); margin-top:0.15rem; line-height:1.35;
+  }
+  .subst-note.subst-status-native{ color:var(--done); }
+  .subst-note.subst-status-specialty{ color:var(--accent-ink); }
 
   .section-heading{
     font-size:1.05rem;
@@ -1201,7 +1209,7 @@
     <section class="group">
       <h2 class="group-title">Fresh Produce</h2>
       <ul class="list">
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="onion"><span class="row-text">Onion <span class="qty" data-scale-type="count" data-scale-base="1.0" data-scale-unit="">&mdash; <span class="scale-num" data-scale-num>1</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="onion"><span class="row-text">White onion <span class="qty" data-scale-type="count" data-scale-base="1.0" data-scale-unit="">&mdash; <span class="scale-num" data-scale-num>1</span></span></span></label></li>
         <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="garlic"><span class="row-text">Garlic <span class="qty" data-scale-type="clove" data-scale-base="2.0" data-scale-unit="clove">&mdash; <span class="scale-num" data-scale-num>2</span> cloves</span></span></label></li>
       </ul>
     </section>
@@ -1216,25 +1224,25 @@
     <section class="group">
       <h2 class="group-title">Dairy</h2>
       <ul class="list">
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="milk"><span class="row-text">Milk <span class="qty" data-scale-type="volume" data-scale-base="250.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>250</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="butter"><span class="row-text">Salted butter <span class="qty" data-scale-type="weight" data-scale-base="30.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>30</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="milk"><span class="row-text">Clover milk <span class="qty" data-scale-type="volume" data-scale-base="250.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>250</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="butter"><span class="row-text">Mooiriver salted butter <span class="qty" data-scale-type="weight" data-scale-base="30.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>30</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
       </ul>
     </section>
 
     <section class="group">
       <h2 class="group-title">Baking Aisle</h2>
       <ul class="list">
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="flour"><span class="row-text">Cake flour <span class="qty" data-scale-type="weight" data-scale-base="500.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>500</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="sugar"><span class="row-text">Sugar <span class="qty" data-scale-type="weight" data-scale-base="25.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>25</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="yeast"><span class="row-text">Instant yeast <span class="qty" data-scale-type="weight" data-scale-base="5.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>5</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="salt"><span class="row-text">Salt <span class="qty" data-scale-type="manual">&mdash; 12 g total (6 g dough + 6 g filling)<span class="scale-manual-flag" title="Complex quantity &mdash; adjust by hand when you scale this recipe">&#9888;</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="flour"><span class="row-text">Snowflake cake flour <span class="qty" data-scale-type="weight" data-scale-base="500.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>500</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="sugar"><span class="row-text">Huletts white sugar <span class="qty" data-scale-type="weight" data-scale-base="25.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>25</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="yeast"><span class="row-text">Anchor instant yeast <span class="qty" data-scale-type="weight" data-scale-base="5.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>5</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="salt"><span class="row-text">Non-iodized salt <span class="qty" data-scale-type="manual">&mdash; 12 g total (6 g dough + 6 g filling)<span class="scale-manual-flag" title="Complex quantity &mdash; adjust by hand when you scale this recipe">&#9888;</span></span></span></label></li>
       </ul>
     </section>
 
     <section class="group">
       <h2 class="group-title">Oils</h2>
       <ul class="list">
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="sunfloweroil"><span class="row-text">Sunflower oil, for frying <span class="qty" data-scale-type="manual">&mdash; approx. 1.5&ndash;2 litres<span class="scale-manual-flag" title="Complex quantity &mdash; adjust by hand when you scale this recipe">&#9888;</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="sunfloweroil"><span class="row-text">B-well sunflower oil, for frying <span class="qty" data-scale-type="manual">&mdash; approx. 1.5&ndash;2 litres<span class="scale-manual-flag" title="Complex quantity &mdash; adjust by hand when you scale this recipe">&#9888;</span></span></span></label></li>
         <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="macoil"><span class="row-text">Macadamia oil <span class="qty" data-scale-type="volume" data-scale-base="30.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>30</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
       </ul>
     </section>
@@ -1242,23 +1250,23 @@
     <section class="group">
       <h2 class="group-title">Spices &amp; Herbs</h2>
       <ul class="list">
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="pepper"><span class="row-text">Fine white pepper <span class="qty">&mdash; a pinch (~0.5 g)</span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="pepper"><span class="row-text">Robertsons fine white pepper <span class="qty">&mdash; a pinch (~0.5 g)</span></span></label></li>
         <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="curry"><span class="row-text">Raja medium curry powder <span class="qty" data-scale-type="weight" data-scale-base="15.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>15</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="coriander"><span class="row-text">Ground coriander <span class="qty" data-scale-type="weight" data-scale-base="4.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>4</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="nutmeg"><span class="row-text">Ground nutmeg <span class="qty" data-scale-type="weight" data-scale-base="0.5" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>0.5</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="fivespice"><span class="row-text">Five spice <span class="qty" data-scale-type="weight" data-scale-base="1.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>1</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="turmeric"><span class="row-text">Turmeric <span class="qty" data-scale-type="weight" data-scale-base="1.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>1</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="coriander"><span class="row-text">Robertsons ground coriander <span class="qty" data-scale-type="weight" data-scale-base="4.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>4</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="nutmeg"><span class="row-text">Robertsons ground nutmeg <span class="qty" data-scale-type="weight" data-scale-base="0.5" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>0.5</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="fivespice"><span class="row-text">Cape Herb &amp; Spice five spice <span class="qty" data-scale-type="weight" data-scale-base="1.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>1</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="turmeric"><span class="row-text">Robertsons turmeric <span class="qty" data-scale-type="weight" data-scale-base="1.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>1</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
       </ul>
     </section>
 
     <section class="group">
       <h2 class="group-title">Sauces, Condiments &amp; Tinned Goods</h2>
       <ul class="list">
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="worcester"><span class="row-text">Worcestershire sauce <span class="qty" data-scale-type="volume" data-scale-base="15.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>15</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="worcester"><span class="row-text">Maggi Lazenby Worcester Sauce <span class="qty" data-scale-type="volume" data-scale-base="15.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>15</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
         <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="tomatoes"><span class="row-text">Koo chopped tomatoes <span class="qty" data-scale-type="manual">&mdash; 1 tin (400 g)<span class="scale-manual-flag" title="Complex quantity &mdash; adjust by hand when you scale this recipe">&#9888;</span></span></span></label></li>
         <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="chutney"><span class="row-text">Mrs Balls Apricot Chutney <span class="qty" data-scale-type="weight" data-scale-base="60.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>60</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
         <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="jam"><span class="row-text">Koo Apricot Jam <span class="qty" data-scale-type="weight" data-scale-base="40.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>40</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="vinegar"><span class="row-text">Brown vinegar <span class="qty" data-scale-type="volume" data-scale-base="15.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>15</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="vinegar"><span class="row-text">Safari brown vinegar <span class="qty" data-scale-type="volume" data-scale-base="15.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>15</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
         <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="bisto"><span class="row-text">Bisto gravy powder <span class="qty" data-scale-type="weight" data-scale-base="15.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>15</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
       </ul>
     </section>
@@ -1628,29 +1636,29 @@
     <section class="group">
       <h2 class="group-title">Dairy</h2>
       <ul class="list">
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="milk"><span class="row-text">Full-cream milk <span class="qty" data-scale-type="volume" data-scale-base="1000.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>1000</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="butter"><span class="row-text">Salted butter <span class="qty" data-scale-type="weight" data-scale-base="55.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>55</span> <span class="scale-unit-suffix">g</span>, plus a little extra for greasing</span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="eggs"><span class="row-text">Large eggs <span class="qty" data-scale-type="count" data-scale-base="4.0" data-scale-unit="">&mdash; <span class="scale-num" data-scale-num>4</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="milk"><span class="row-text">Clover full-cream milk <span class="qty" data-scale-type="volume" data-scale-base="1000.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>1000</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="butter"><span class="row-text">Mooiriver salted butter <span class="qty" data-scale-type="weight" data-scale-base="55.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>55</span> <span class="scale-unit-suffix">g</span>, plus a little extra for greasing</span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="eggs"><span class="row-text">Nulaid large eggs <span class="qty" data-scale-type="count" data-scale-base="4.0" data-scale-unit="">&mdash; <span class="scale-num" data-scale-num>4</span></span></span></label></li>
       </ul>
     </section>
 
     <section class="group">
       <h2 class="group-title">Baking Aisle</h2>
       <ul class="list">
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="sago"><span class="row-text">Sago pearls <span class="qty" data-scale-type="weight" data-scale-base="140.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>140</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="whitesugar"><span class="row-text">White sugar <span class="qty" data-scale-type="weight" data-scale-base="50.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>50</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="castersugar"><span class="row-text">Caster sugar <span class="qty" data-scale-type="weight" data-scale-base="200.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>200</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="cornflour"><span class="row-text">Cornflour <span class="qty" data-scale-type="weight" data-scale-base="10.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>10</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="tartar"><span class="row-text">Cream of tartar <span class="qty" data-scale-type="weight" data-scale-base="2.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>2</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="vanilla"><span class="row-text">Vanilla extract <span class="qty" data-scale-type="volume" data-scale-base="5.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>5</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="salt"><span class="row-text">Salt <span class="qty" data-scale-type="weight" data-scale-base="1.5" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>1.5</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="sago"><span class="row-text">Imbo sago pearls <span class="qty" data-scale-type="weight" data-scale-base="140.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>140</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="whitesugar"><span class="row-text">Huletts white sugar <span class="qty" data-scale-type="weight" data-scale-base="50.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>50</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="castersugar"><span class="row-text">Huletts caster sugar <span class="qty" data-scale-type="weight" data-scale-base="200.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>200</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="cornflour"><span class="row-text">Maizena cornflour <span class="qty" data-scale-type="weight" data-scale-base="10.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>10</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="tartar"><span class="row-text">Robertsons cream of tartar <span class="qty" data-scale-type="weight" data-scale-base="2.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>2</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="vanilla"><span class="row-text">Safford&rsquo;s Bourbon vanilla extract <span class="qty" data-scale-type="volume" data-scale-base="5.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>5</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="salt"><span class="row-text">Non-iodized salt <span class="qty" data-scale-type="weight" data-scale-base="1.5" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>1.5</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
       </ul>
     </section>
 
     <section class="group">
       <h2 class="group-title">Sauces, Condiments &amp; Preserves</h2>
       <ul class="list">
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="jam"><span class="row-text">Apricot jam <span class="qty" data-scale-type="weight" data-scale-base="180.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>180</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="jam"><span class="row-text">Koo apricot jam <span class="qty" data-scale-type="weight" data-scale-base="180.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>180</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
       </ul>
     </section>
 
@@ -1942,31 +1950,31 @@
     <section class="group">
       <h2 class="group-title">Vinegar &amp; Pantry</h2>
       <ul class="list">
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="vinegar"><span class="row-text">White or brown vinegar <span class="qty" data-scale-type="volume" data-scale-base="250.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>250</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="coarsesalt"><span class="row-text">Coarse salt <span class="qty" data-scale-type="weight" data-scale-base="26.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>26</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="smokemat"><span class="row-text">Smoking material &mdash; wood chips, or rice + brown sugar + tea <span class="qty" data-scale-type="manual">&mdash; 2 tbsp (&asymp;5g), or 1 tbsp (&asymp;12g) / 1 tbsp (&asymp;12g) / 1 tsp (&asymp;2g)<span class="scale-manual-flag" title="Complex quantity &mdash; adjust by hand when you scale this recipe">&#9888;</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="vinegar"><span class="row-text">Safari white or brown vinegar <span class="qty" data-scale-type="volume" data-scale-base="250.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>250</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="coarsesalt"><span class="row-text">Coarse non-iodized salt <span class="qty" data-scale-type="weight" data-scale-base="26.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>26</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="smokemat"><span class="row-text">Smoking material &mdash; wood chips, or Tastic rice + Huletts brown sugar + Joko tea <span class="qty" data-scale-type="manual">&mdash; 2 tbsp (&asymp;5g), or 1 tbsp (&asymp;12g) / 1 tbsp (&asymp;12g) / 1 tsp (&asymp;2g)<span class="scale-manual-flag" title="Complex quantity &mdash; adjust by hand when you scale this recipe">&#9888;</span></span></span></label></li>
       </ul>
     </section>
 
     <section class="group">
       <h2 class="group-title">Spice Rack</h2>
       <ul class="list">
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="coriander"><span class="row-text">Coriander seed, whole <span class="qty" data-scale-type="weight" data-scale-base="8.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>8</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="cloves"><span class="row-text">Whole cloves (&ldquo;naeltjies&rdquo;) <span class="qty" data-scale-type="count" data-scale-base="3.0" data-scale-unit="">&mdash; <span class="scale-num" data-scale-num>3</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="paprika"><span class="row-text">Sweet paprika <span class="qty" data-scale-type="weight" data-scale-base="6.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>6</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="garlicpowder"><span class="row-text">Garlic powder <span class="qty" data-scale-type="weight" data-scale-base="4.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>4</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="onionpowder"><span class="row-text">Onion powder <span class="qty" data-scale-type="weight" data-scale-base="4.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>4</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="blackpepper"><span class="row-text">Black pepper <span class="qty" data-scale-type="weight" data-scale-base="3.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>3</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="whitepepper"><span class="row-text">White pepper <span class="qty" data-scale-type="weight" data-scale-base="2.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>2</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="nutmeg"><span class="row-text">Nutmeg, whole (for grating) <span class="qty" data-scale-type="spoon" data-scale-base="0.25" data-scale-unit="tsp">&mdash; <span class="scale-num" data-scale-num>&frac14;</span> tsp grated</span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="msg"><span class="row-text">MSG, optional <span class="qty" data-scale-type="spoon" data-scale-base="0.25" data-scale-unit="tsp">&mdash; <span class="scale-num" data-scale-num>&frac14;</span> tsp</span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="coriander"><span class="row-text">Atlas coriander seed, whole <span class="qty" data-scale-type="weight" data-scale-base="8.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>8</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="cloves"><span class="row-text">Whole Robertsons cloves (&ldquo;naeltjies&rdquo;) <span class="qty" data-scale-type="count" data-scale-base="3.0" data-scale-unit="">&mdash; <span class="scale-num" data-scale-num>3</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="paprika"><span class="row-text">Robertsons sweet paprika <span class="qty" data-scale-type="weight" data-scale-base="6.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>6</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="garlicpowder"><span class="row-text">Robertsons garlic powder <span class="qty" data-scale-type="weight" data-scale-base="4.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>4</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="onionpowder"><span class="row-text">Robertsons onion powder <span class="qty" data-scale-type="weight" data-scale-base="4.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>4</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="blackpepper"><span class="row-text">Robertsons black pepper <span class="qty" data-scale-type="weight" data-scale-base="3.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>3</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="whitepepper"><span class="row-text">Robertsons white pepper <span class="qty" data-scale-type="weight" data-scale-base="2.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>2</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="nutmeg"><span class="row-text">Robertsons nutmeg, whole (for grating) <span class="qty" data-scale-type="spoon" data-scale-base="0.25" data-scale-unit="tsp">&mdash; <span class="scale-num" data-scale-num>&frac14;</span> tsp grated</span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="msg"><span class="row-text">Freddy Hirsch MSG, optional <span class="qty" data-scale-type="spoon" data-scale-base="0.25" data-scale-unit="tsp">&mdash; <span class="scale-num" data-scale-num>&frac14;</span> tsp</span></span></label></li>
       </ul>
     </section>
 
     <section class="group">
       <h2 class="group-title">Dairy</h2>
       <ul class="list">
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="butter"><span class="row-text">Butter <span class="qty" data-scale-type="weight" data-scale-base="40.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>40</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="butter"><span class="row-text">Mooiriver butter <span class="qty" data-scale-type="weight" data-scale-base="40.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>40</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
       </ul>
     </section>
 
@@ -2222,28 +2230,28 @@
     <section class="group">
       <h2 class="group-title">Fridge</h2>
       <ul class="list">
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="mayo"><span class="row-text">Full-egg mayonnaise (not salad dressing) <span class="qty" data-scale-type="weight" data-scale-base="200.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>200</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="gherkins"><span class="row-text">Baby gherkins or dill pickles <span class="qty" data-scale-type="weight" data-scale-base="30.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>30</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="mustard"><span class="row-text">Prepared yellow mustard, smooth <span class="qty" data-scale-type="weight" data-scale-base="15.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>15</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="mayo"><span class="row-text">Nola full-egg mayonnaise (not salad dressing) <span class="qty" data-scale-type="weight" data-scale-base="200.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>200</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="gherkins"><span class="row-text">Rhodes baby gherkins or dill pickles <span class="qty" data-scale-type="weight" data-scale-base="30.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>30</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="mustard"><span class="row-text">Colman&rsquo;s American Mild prepared yellow mustard, smooth <span class="qty" data-scale-type="weight" data-scale-base="15.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>15</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
       </ul>
     </section>
 
     <section class="group">
       <h2 class="group-title">Vinegar &amp; Pantry</h2>
       <ul class="list">
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="vinegar"><span class="row-text">White wine vinegar <span class="qty" data-scale-type="volume" data-scale-base="10.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>10</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="sugar"><span class="row-text">White sugar <span class="qty" data-scale-type="weight" data-scale-base="5.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>5</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="vinegar"><span class="row-text">Safari white wine vinegar <span class="qty" data-scale-type="volume" data-scale-base="10.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>10</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="sugar"><span class="row-text">Huletts white sugar <span class="qty" data-scale-type="weight" data-scale-base="5.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>5</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
       </ul>
     </section>
 
     <section class="group">
       <h2 class="group-title">Spice Rack</h2>
       <ul class="list">
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="onionpowder"><span class="row-text">Onion powder <span class="qty" data-scale-type="weight" data-scale-base="3.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>3</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="garlicpowder"><span class="row-text">Garlic powder <span class="qty" data-scale-type="weight" data-scale-base="3.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>3</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="salt"><span class="row-text">Fine salt <span class="qty" data-scale-type="weight" data-scale-base="2.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>2</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="whitepepper"><span class="row-text">Fine white pepper <span class="qty" data-scale-type="weight" data-scale-base="1.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>1</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="msg"><span class="row-text">MSG, optional <span class="qty" data-scale-type="weight" data-scale-base="1.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>1</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="onionpowder"><span class="row-text">Robertsons onion powder <span class="qty" data-scale-type="weight" data-scale-base="3.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>3</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="garlicpowder"><span class="row-text">Robertsons garlic powder <span class="qty" data-scale-type="weight" data-scale-base="3.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>3</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="salt"><span class="row-text">Fine non-iodized salt <span class="qty" data-scale-type="weight" data-scale-base="2.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>2</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="whitepepper"><span class="row-text">Robertsons fine white pepper <span class="qty" data-scale-type="weight" data-scale-base="1.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>1</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="msg"><span class="row-text">Freddy Hirsch MSG, optional <span class="qty" data-scale-type="weight" data-scale-base="1.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>1</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
       </ul>
     </section>
 
@@ -2433,24 +2441,24 @@
     <section class="group">
       <h2 class="group-title">Sauces &amp; Condiments</h2>
       <ul class="list">
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="teriyaki"><span class="row-text">Bottled teriyaki sauce, any brand <span class="qty" data-scale-type="volume" data-scale-base="160.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>160</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="honey"><span class="row-text">Honey <span class="qty" data-scale-type="volume" data-scale-base="30.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>30</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="teriyaki"><span class="row-text">Amoy Japanese teriyaki sauce <span class="qty" data-scale-type="volume" data-scale-base="160.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>160</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="honey"><span class="row-text">Nature&rsquo;s Buzz raw honey <span class="qty" data-scale-type="volume" data-scale-base="30.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>30</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
       </ul>
     </section>
 
     <section class="group">
       <h2 class="group-title">Baking Aisle</h2>
       <ul class="list">
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="brownsugar"><span class="row-text">Brown sugar <span class="qty" data-scale-type="weight" data-scale-base="15.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>15</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="brownsugar"><span class="row-text">Huletts brown sugar <span class="qty" data-scale-type="weight" data-scale-base="15.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>15</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
       </ul>
     </section>
 
     <section class="group">
       <h2 class="group-title">Spice Rack</h2>
       <ul class="list">
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="salt"><span class="row-text">Salt <span class="qty" data-scale-type="volume" data-scale-base="5.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>5</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="pepper"><span class="row-text">Black pepper <span class="qty" data-scale-type="volume" data-scale-base="3.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>3</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="garlicpowder"><span class="row-text">Garlic powder <span class="qty" data-scale-type="volume" data-scale-base="5.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>5</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="salt"><span class="row-text">Non-iodized salt <span class="qty" data-scale-type="volume" data-scale-base="5.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>5</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="pepper"><span class="row-text">Robertsons black pepper <span class="qty" data-scale-type="volume" data-scale-base="3.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>3</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="garlicpowder"><span class="row-text">Robertsons garlic powder <span class="qty" data-scale-type="volume" data-scale-base="5.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>5</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
         <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="sesameseeds"><span class="row-text">Sesame seeds <span class="qty" data-scale-type="volume" data-scale-base="15.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>15</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
       </ul>
     </section>
@@ -2458,7 +2466,7 @@
     <section class="group">
       <h2 class="group-title">Pantry</h2>
       <ul class="list">
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="oil"><span class="row-text">Neutral oil (sunflower or canola) <span class="qty" data-scale-type="volume" data-scale-base="15.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>15</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="oil"><span class="row-text">B-well neutral oil (sunflower or canola) <span class="qty" data-scale-type="volume" data-scale-base="15.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>15</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
       </ul>
     </section>
 
@@ -2658,18 +2666,18 @@
     <section class="group">
       <h2 class="group-title">Sauces &amp; Condiments</h2>
       <ul class="list">
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="soy"><span class="row-text">Soy sauce <span class="qty" data-scale-type="volume" data-scale-base="125.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>125</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="honey"><span class="row-text">Honey <span class="qty" data-scale-type="volume" data-scale-base="15.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>15</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="sesameoil"><span class="row-text">Sesame oil <span class="qty" data-scale-type="volume" data-scale-base="5.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>5</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="mirin"><span class="row-text">Mirin <span class="qty" data-scale-type="volume" data-scale-base="45.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>45</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="soy"><span class="row-text">Kikkoman soy sauce <span class="qty" data-scale-type="volume" data-scale-base="125.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>125</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="honey"><span class="row-text">Nature&rsquo;s Buzz raw honey <span class="qty" data-scale-type="volume" data-scale-base="15.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>15</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="sesameoil"><span class="row-text">Exotic Foods sesame oil <span class="qty" data-scale-type="volume" data-scale-base="5.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>5</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="mirin"><span class="row-text">Kikkoman mirin <span class="qty" data-scale-type="volume" data-scale-base="45.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>45</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
       </ul>
     </section>
 
     <section class="group">
       <h2 class="group-title">Baking Aisle</h2>
       <ul class="list">
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="brownsugar"><span class="row-text">Brown sugar <span class="qty" data-scale-type="weight" data-scale-base="60.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>60</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="cornflour"><span class="row-text">Cornflour (cornstarch) <span class="qty" data-scale-type="volume" data-scale-base="15.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>15</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="brownsugar"><span class="row-text">Huletts brown sugar <span class="qty" data-scale-type="weight" data-scale-base="60.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>60</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="cornflour"><span class="row-text">Maizena cornflour (cornstarch) <span class="qty" data-scale-type="volume" data-scale-base="15.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>15</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
       </ul>
     </section>
 
@@ -2846,28 +2854,28 @@
     <section class="group">
       <h2 class="group-title">Pantry</h2>
       <ul class="list">
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="rice"><span class="row-text">Long-grain white rice <span class="qty" data-scale-type="weight" data-scale-base="300.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>300</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="rice"><span class="row-text">Tastic long-grain white rice <span class="qty" data-scale-type="weight" data-scale-base="300.0" data-scale-unit="g">&mdash; <span class="scale-num" data-scale-num>300</span> <span class="scale-unit-suffix">g</span></span></span></label></li>
       </ul>
     </section>
 
     <section class="group">
       <h2 class="group-title">Sauces &amp; Condiments</h2>
       <ul class="list">
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="stock"><span class="row-text">Chicken or vegetable stock <span class="qty" data-scale-type="volume" data-scale-base="450.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>450</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="stock"><span class="row-text">Ina Paarman chicken or vegetable stock <span class="qty" data-scale-type="volume" data-scale-base="450.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>450</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
       </ul>
     </section>
 
     <section class="group">
       <h2 class="group-title">Dairy</h2>
       <ul class="list">
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="butter"><span class="row-text">Butter, optional <span class="qty" data-scale-type="volume" data-scale-base="15.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>15</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="butter"><span class="row-text">Mooiriver butter, optional <span class="qty" data-scale-type="volume" data-scale-base="15.0" data-scale-unit="ml">&mdash; <span class="scale-num" data-scale-num>15</span> <span class="scale-unit-suffix">ml</span></span></span></label></li>
       </ul>
     </section>
 
     <section class="group">
       <h2 class="group-title">Spice Rack</h2>
       <ul class="list">
-        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="salt"><span class="row-text">Salt, optional, to taste <span class="qty">&mdash; a pinch</span></span></label></li>
+        <li class="row"><label class="row-inner"><input type="checkbox" data-store="shop" data-key="salt"><span class="row-text">Non-iodized salt, optional, to taste <span class="qty">&mdash; a pinch</span></span></label></li>
       </ul>
     </section>
 
@@ -4115,6 +4123,100 @@
     backdrop.addEventListener('click', function(){
       if(safeGetPlain(DONE_KEY)){ closeModal(); }
     });
+  })();
+
+  // ---- Location-aware Shop substitutes (pilot: United Kingdom only) ----
+  // Reads the country already saved by the popup above. Loads
+  // ingredients-db.json once; if that fetch fails (e.g. no connection),
+  // the feature just stays quiet -- same pattern as the app's own
+  // version-check. Nothing here changes what's ticked or scaled.
+  (function(){
+    var SUBST_ON_KEY = 'capetable-show-substitutes-v1';
+    var COUNTRY_KEY = 'capetable-settings-country-v1';
+    var db = null;
+
+    function safeGetPlain(key){
+      try{ return localStorage.getItem(key) || ''; }catch(e){ return ''; }
+    }
+    function safeSetPlain(key, val){
+      try{ localStorage.setItem(key, val); }catch(e){}
+    }
+    function getCountry(){ return safeGetPlain(COUNTRY_KEY) || 'sa'; }
+    function isOn(){ return safeGetPlain(SUBST_ON_KEY) === '1'; }
+
+    function clearNotes(recipeEl){
+      recipeEl.querySelectorAll('.subst-note').forEach(function(n){
+        if(n.parentNode){ n.parentNode.removeChild(n); }
+      });
+    }
+
+    function renderNotesForRecipe(recipeEl){
+      clearNotes(recipeEl);
+      if(!isOn() || !db){ return; }
+      var country = getCountry();
+      if(country !== 'uk'){ return; } // pilot only covers the UK so far
+      var boxes = recipeEl.querySelectorAll('.panel[data-panel="shop"] input[data-store="shop"]');
+      boxes.forEach(function(box){
+        var label = box.closest('label');
+        var textEl = label ? label.querySelector('.row-text') : null;
+        if(!textEl){ return; }
+        var qtyEl = textEl.querySelector('.qty');
+        var fullText = textEl.textContent;
+        var name = qtyEl ? fullText.slice(0, fullText.indexOf(qtyEl.textContent)).trim() : fullText.trim();
+        var entry = db[name];
+        var info = entry && entry[country];
+        if(!info){ return; }
+        var note = document.createElement('span');
+        note.className = 'subst-note subst-status-' + info.status;
+        var prefix = info.status === 'native' ? 'Already sold in the UK \u2014 '
+          : (info.status === 'specialty' ? 'UK: ' : 'UK equivalent: ');
+        note.textContent = prefix + info.note;
+        textEl.appendChild(note);
+      });
+    }
+
+    function renderAll(){
+      document.querySelectorAll('.recipe-view').forEach(renderNotesForRecipe);
+    }
+
+    function addToggleButtons(){
+      var hasData = (getCountry() === 'uk');
+      document.querySelectorAll('.panel[data-panel="shop"] .progress-wrap').forEach(function(wrap){
+        var existing = wrap.querySelector('[data-subst-toggle]');
+        if(!hasData){ if(existing){ existing.remove(); } return; }
+        if(existing){ return; }
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'reset-btn';
+        btn.setAttribute('data-subst-toggle', '1');
+        function refreshLabel(){
+          var on = isOn();
+          btn.textContent = on ? 'Hide local substitutes' : 'Show local substitutes';
+          btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+        }
+        btn.addEventListener('click', function(){
+          safeSetPlain(SUBST_ON_KEY, isOn() ? '0' : '1');
+          refreshLabel();
+          renderAll();
+        });
+        refreshLabel();
+        wrap.appendChild(btn);
+      });
+    }
+
+    addToggleButtons();
+
+    fetch('ingredients-db.json').then(function(r){ return r.json(); }).then(function(data){
+      db = data;
+      renderAll();
+    }).catch(function(){ /* quiet -- no connection or file unavailable */ });
+
+    // Re-render if the Country/City/Scale popup gets confirmed again, in
+    // case the country changed while substitutes were already switched on.
+    var settingsConfirmBtn = document.getElementById('settings-confirm-btn');
+    if(settingsConfirmBtn){
+      settingsConfirmBtn.addEventListener('click', function(){ addToggleButtons(); renderAll(); });
+    }
   })();
 </script>
 

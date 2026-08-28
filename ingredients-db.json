@@ -1,7 +1,9 @@
 {
   "_meta": {
     "purpose": "Location-aware shopping substitutes for The Cape Table. Keyed by the exact ingredient-name text as it appears in a recipe's Shop tab (before the quantity). Looked up by the app when a visitor's stored country has an entry below.",
-    "countries_covered": ["uk"],
+    "countries_covered": [
+      "uk"
+    ],
     "status_meanings": {
       "native": "Already a native/mainstream product in that country -- nothing to substitute, buy it as named.",
       "specialty": "The real South African product is orderable there, usually via a specialty importer -- an everyday supermarket alternative is also given for anyone who'd rather not order in.",
@@ -10,59 +12,322 @@
     "pilot_note": "Built 2026-08-28 from the 7 live Cape Table recipes, United Kingdom only. Reviewed by Koot before being wired into the app.",
     "updated": "2026-08-28"
   },
-
-  "Maggi Lazenby Worcester Sauce": { "uk": { "status": "specialty", "note": "Orderable from South African specialty shops in the UK (e.g. Best Biltong, Weston Biltong Company). Everyday alternative: Lea & Perrins -- the standard UK Worcestershire sauce." } },
-  "Koo chopped tomatoes": { "uk": { "status": "specialty", "note": "Orderable from South African specialty shops in the UK (e.g. The South African Spaza Shop). Everyday alternative: any tinned chopped tomatoes, e.g. Napolina." } },
-  "Mrs Balls Apricot Chutney": { "uk": { "status": "specialty", "note": "Sold directly by Tesco and on Amazon UK -- the easiest of the South African brands in this app to find in the UK. Everyday alternative: Branston fruity chutney, or a mango chutney such as Patak's." } },
-  "Koo Apricot Jam": { "uk": { "status": "specialty", "note": "Orderable from South African specialty shops in the UK. Everyday alternative: any apricot jam, e.g. Bonne Maman." } },
-  "Koo apricot jam": { "uk": { "status": "specialty", "note": "Orderable from South African specialty shops in the UK. Everyday alternative: any apricot jam, e.g. Bonne Maman." } },
-  "Raja medium curry powder": { "uk": { "status": "specialty", "note": "Orderable from South African specialty shops in the UK (e.g. biltong.co.uk, The South African Spaza Shop). Everyday alternative: a UK \"medium\" curry powder, e.g. Bolst's -- worth a side-by-side taste, since Raja runs sweeter/milder than most UK medium blends." } },
-  "Safari white or brown vinegar": { "uk": { "status": "specialty", "note": "Orderable from South African specialty shops in the UK (e.g. Best Biltong). Everyday alternative: malt vinegar." } },
-  "Safari white wine vinegar": { "uk": { "status": "specialty", "note": "Orderable from South African specialty shops in the UK. Everyday alternative: any plain white wine vinegar." } },
-  "Safari brown vinegar": { "uk": { "status": "specialty", "note": "Orderable from South African specialty shops in the UK (e.g. Best Biltong). Everyday alternative: malt vinegar." } },
-  "Ina Paarman chicken or vegetable stock": { "uk": { "status": "specialty", "note": "Sold on Amazon UK directly, as well as South African specialty shops. Everyday alternative: any stock cube or powder, e.g. Knorr or Oxo." } },
-
-  "Colman’s American Mild prepared yellow mustard, smooth": { "uk": { "status": "native", "note": "Colman's is a British brand (Colman's of Norwich) -- already on every UK supermarket shelf, nothing to substitute." } },
-  "Amoy Japanese teriyaki sauce": { "uk": { "status": "native", "note": "Sold directly by Tesco and Sainsbury's -- already mainstream in the UK, nothing to substitute." } },
-  "Kikkoman soy sauce": { "uk": { "status": "native", "note": "Kikkoman is sold in every UK supermarket -- nothing to substitute." } },
-  "Kikkoman mirin": { "uk": { "status": "native", "note": "Kikkoman is sold in every UK supermarket -- nothing to substitute." } },
-  "Bisto gravy powder": { "uk": { "status": "native", "note": "Bisto is a British brand -- already on every UK supermarket shelf, nothing to substitute." } },
-
-  "Clover milk": { "uk": { "status": "everyday", "note": "Any whole/full-fat milk." } },
-  "Clover full-cream milk": { "uk": { "status": "everyday", "note": "Any whole/full-fat milk." } },
-  "Mooiriver salted butter": { "uk": { "status": "everyday", "note": "Any salted butter, e.g. Lurpak." } },
-  "Mooiriver butter": { "uk": { "status": "everyday", "note": "Any salted butter, e.g. Lurpak." } },
-  "Mooiriver butter, optional": { "uk": { "status": "everyday", "note": "Any salted butter, e.g. Lurpak." } },
-  "Snowflake cake flour": { "uk": { "status": "everyday", "note": "Any plain/cake flour, e.g. Doves Farm." } },
-  "Huletts white sugar": { "uk": { "status": "everyday", "note": "Any white/granulated sugar, e.g. Tate & Lyle." } },
-  "Huletts caster sugar": { "uk": { "status": "everyday", "note": "Any caster sugar, e.g. Tate & Lyle." } },
-  "Huletts brown sugar": { "uk": { "status": "everyday", "note": "Any light or dark brown sugar, e.g. Tate & Lyle." } },
-  "Anchor instant yeast": { "uk": { "status": "everyday", "note": "Any instant/fast-action dried yeast, e.g. Allinson's. Note: this is a South African yeast brand (Lesaffre) -- unrelated to the New Zealand \"Anchor\" dairy brand also sold in the UK, just a same-name coincidence." } },
-  "B-well sunflower oil, for frying": { "uk": { "status": "everyday", "note": "Any sunflower oil, supermarket own-brand is fine." } },
-  "B-well neutral oil (sunflower or canola)": { "uk": { "status": "everyday", "note": "Any sunflower or rapeseed oil, supermarket own-brand is fine." } },
-  "Robertsons fine white pepper": { "uk": { "status": "everyday", "note": "Any white pepper, e.g. Schwartz." } },
-  "Robertsons white pepper": { "uk": { "status": "everyday", "note": "Any white pepper, e.g. Schwartz." } },
-  "Robertsons ground coriander": { "uk": { "status": "everyday", "note": "Any ground coriander, e.g. Schwartz." } },
-  "Robertsons ground nutmeg": { "uk": { "status": "everyday", "note": "Any ground nutmeg, e.g. Schwartz." } },
-  "Robertsons nutmeg, whole (for grating)": { "uk": { "status": "everyday", "note": "Any whole nutmeg for grating, e.g. Schwartz." } },
-  "Robertsons cream of tartar": { "uk": { "status": "everyday", "note": "Any cream of tartar, e.g. Dr. Oetker or supermarket own-brand." } },
-  "Robertsons turmeric": { "uk": { "status": "everyday", "note": "Any ground turmeric, e.g. Schwartz." } },
-  "Robertsons sweet paprika": { "uk": { "status": "everyday", "note": "Any sweet paprika, e.g. Schwartz." } },
-  "Robertsons garlic powder": { "uk": { "status": "everyday", "note": "Any garlic powder, e.g. Schwartz." } },
-  "Robertsons onion powder": { "uk": { "status": "everyday", "note": "Any onion powder, e.g. Schwartz." } },
-  "Robertsons black pepper": { "uk": { "status": "everyday", "note": "Any black pepper, e.g. Schwartz." } },
-  "Whole Robertsons cloves (“naeltjies”)": { "uk": { "status": "everyday", "note": "Any whole cloves, e.g. Schwartz." } },
-  "Cape Herb & Spice five spice": { "uk": { "status": "everyday", "note": "Any Chinese five spice blend, e.g. Schwartz." } },
-  "Atlas coriander seed, whole": { "uk": { "status": "everyday", "note": "Any whole coriander seed, e.g. Schwartz." } },
-  "Freddy Hirsch MSG, optional": { "uk": { "status": "everyday", "note": "Any pure MSG -- Ajinomoto is the globally recognised brand, sold in the UK especially at Asian grocers." } },
-  "Nulaid large eggs": { "uk": { "status": "everyday", "note": "Any large eggs." } },
-  "Imbo sago pearls": { "uk": { "status": "everyday", "note": "Sago pearls aren't brand-specific -- usually found in the world-foods aisle or an Asian grocer." } },
-  "Maizena cornflour": { "uk": { "status": "everyday", "note": "Brown & Polson -- the standard UK cornflour brand." } },
-  "Maizena cornflour (cornstarch)": { "uk": { "status": "everyday", "note": "Brown & Polson -- the standard UK cornflour brand." } },
-  "Safford’s Bourbon vanilla extract": { "uk": { "status": "everyday", "note": "Any pure vanilla extract, e.g. Nielsen-Massey." } },
-  "Nola full-egg mayonnaise (not salad dressing)": { "uk": { "status": "everyday", "note": "Any full-egg mayonnaise -- Hellmann's is the closest widely-available match in richness." } },
-  "Rhodes baby gherkins or dill pickles": { "uk": { "status": "everyday", "note": "Any baby gherkins or dill pickles, supermarket own-brand is fine." } },
-  "Nature’s Buzz raw honey": { "uk": { "status": "everyday", "note": "Any raw or clear honey." } },
-  "Exotic Foods sesame oil": { "uk": { "status": "everyday", "note": "Any toasted sesame oil, e.g. Clearspring or an Asian grocer's own-brand." } },
-  "Tastic long-grain white rice": { "uk": { "status": "everyday", "note": "Any long-grain white rice, e.g. Tilda." } }
+  "Maggi Lazenby Worcester Sauce": {
+    "uk": {
+      "status": "specialty",
+      "note": "Orderable from South African specialty shops in the UK (e.g. Best Biltong, Weston Biltong Company). Everyday alternative: Lea & Perrins -- the standard UK Worcestershire sauce."
+    }
+  },
+  "Koo chopped tomatoes": {
+    "uk": {
+      "status": "specialty",
+      "note": "Orderable from South African specialty shops in the UK (e.g. The South African Spaza Shop). Everyday alternative: any tinned chopped tomatoes, e.g. Napolina."
+    }
+  },
+  "Mrs Balls Apricot Chutney": {
+    "uk": {
+      "status": "specialty",
+      "note": "Sold directly by Tesco and on Amazon UK -- the easiest of the South African brands in this app to find in the UK. Everyday alternative: Branston fruity chutney, or a mango chutney such as Patak's."
+    }
+  },
+  "Koo Apricot Jam": {
+    "uk": {
+      "status": "specialty",
+      "note": "Orderable from South African specialty shops in the UK. Everyday alternative: any apricot jam, e.g. Bonne Maman."
+    }
+  },
+  "Koo apricot jam": {
+    "uk": {
+      "status": "specialty",
+      "note": "Orderable from South African specialty shops in the UK. Everyday alternative: any apricot jam, e.g. Bonne Maman."
+    }
+  },
+  "Raja medium curry powder": {
+    "uk": {
+      "status": "specialty",
+      "note": "Orderable from South African specialty shops in the UK (e.g. biltong.co.uk, The South African Spaza Shop). Everyday alternative: a UK \"medium\" curry powder, e.g. Bolst's -- worth a side-by-side taste, since Raja runs sweeter/milder than most UK medium blends."
+    }
+  },
+  "Safari white or brown vinegar": {
+    "uk": {
+      "status": "specialty",
+      "note": "Orderable from South African specialty shops in the UK (e.g. Best Biltong). Everyday alternative: malt vinegar."
+    }
+  },
+  "Safari white wine vinegar": {
+    "uk": {
+      "status": "specialty",
+      "note": "Orderable from South African specialty shops in the UK. Everyday alternative: any plain white wine vinegar."
+    }
+  },
+  "Safari brown vinegar": {
+    "uk": {
+      "status": "specialty",
+      "note": "Orderable from South African specialty shops in the UK (e.g. Best Biltong). Everyday alternative: malt vinegar."
+    }
+  },
+  "Ina Paarman chicken or vegetable stock": {
+    "uk": {
+      "status": "specialty",
+      "note": "Sold on Amazon UK directly, as well as South African specialty shops. Everyday alternative: any stock cube or powder, e.g. Knorr or Oxo."
+    }
+  },
+  "Colman’s American Mild prepared yellow mustard, smooth": {
+    "uk": {
+      "status": "native",
+      "note": "Colman's is a British brand (Colman's of Norwich) -- already on every UK supermarket shelf, nothing to substitute."
+    }
+  },
+  "Amoy Japanese teriyaki sauce": {
+    "uk": {
+      "status": "native",
+      "note": "Sold directly by Tesco and Sainsbury's -- already mainstream in the UK, nothing to substitute."
+    }
+  },
+  "Kikkoman soy sauce": {
+    "uk": {
+      "status": "native",
+      "note": "Kikkoman is sold in every UK supermarket -- nothing to substitute."
+    }
+  },
+  "Kikkoman mirin": {
+    "uk": {
+      "status": "native",
+      "note": "Kikkoman is sold in every UK supermarket -- nothing to substitute."
+    }
+  },
+  "Bisto gravy powder": {
+    "uk": {
+      "status": "native",
+      "note": "Bisto is a British brand -- already on every UK supermarket shelf, nothing to substitute."
+    }
+  },
+  "Clover milk": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any whole/full-fat milk."
+    }
+  },
+  "Clover full-cream milk": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any whole/full-fat milk."
+    }
+  },
+  "Mooiriver salted butter": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any salted butter, e.g. Lurpak."
+    }
+  },
+  "Mooiriver butter": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any salted butter, e.g. Lurpak."
+    }
+  },
+  "Mooiriver butter, optional": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any salted butter, e.g. Lurpak."
+    }
+  },
+  "Snowflake cake flour": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any plain/cake flour, e.g. Doves Farm."
+    }
+  },
+  "Huletts white sugar": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any white/granulated sugar, e.g. Tate & Lyle."
+    }
+  },
+  "Huletts caster sugar": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any caster sugar, e.g. Tate & Lyle."
+    }
+  },
+  "Huletts brown sugar": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any light or dark brown sugar, e.g. Tate & Lyle."
+    }
+  },
+  "Anchor instant yeast": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any instant/fast-action dried yeast, e.g. Allinson's. Note: this is a South African yeast brand (Lesaffre) -- unrelated to the New Zealand \"Anchor\" dairy brand also sold in the UK, just a same-name coincidence."
+    }
+  },
+  "B-well sunflower oil, for frying": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any sunflower oil, supermarket own-brand is fine."
+    }
+  },
+  "B-well neutral oil (sunflower or canola)": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any sunflower or rapeseed oil, supermarket own-brand is fine."
+    }
+  },
+  "Robertsons fine white pepper": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any white pepper, e.g. Schwartz."
+    }
+  },
+  "Robertsons white pepper": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any white pepper, e.g. Schwartz."
+    }
+  },
+  "Robertsons ground coriander": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any ground coriander, e.g. Schwartz."
+    }
+  },
+  "Robertsons ground nutmeg": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any ground nutmeg, e.g. Schwartz."
+    }
+  },
+  "Robertsons nutmeg, whole (for grating)": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any whole nutmeg for grating, e.g. Schwartz."
+    }
+  },
+  "Robertsons cream of tartar": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any cream of tartar, e.g. Dr. Oetker or supermarket own-brand."
+    }
+  },
+  "Robertsons turmeric": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any ground turmeric, e.g. Schwartz."
+    }
+  },
+  "Robertsons sweet paprika": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any sweet paprika, e.g. Schwartz."
+    }
+  },
+  "Robertsons garlic powder": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any garlic powder, e.g. Schwartz."
+    }
+  },
+  "Robertsons onion powder": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any onion powder, e.g. Schwartz."
+    }
+  },
+  "Robertsons black pepper": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any black pepper, e.g. Schwartz."
+    }
+  },
+  "Whole Robertsons cloves (“naeltjies”)": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any whole cloves, e.g. Schwartz."
+    }
+  },
+  "Cape Herb & Spice five spice": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any Chinese five spice blend, e.g. Schwartz."
+    }
+  },
+  "Atlas coriander seed, whole": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any whole coriander seed, e.g. Schwartz."
+    }
+  },
+  "Freddy Hirsch MSG, optional": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any pure MSG -- Ajinomoto is the globally recognised brand, sold in the UK especially at Asian grocers."
+    }
+  },
+  "Nulaid large eggs": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any large eggs."
+    }
+  },
+  "Imbo sago pearls": {
+    "uk": {
+      "status": "everyday",
+      "note": "Sago pearls aren't brand-specific -- usually found in the world-foods aisle or an Asian grocer."
+    }
+  },
+  "Maizena cornflour": {
+    "uk": {
+      "status": "everyday",
+      "note": "Brown & Polson -- the standard UK cornflour brand."
+    }
+  },
+  "Maizena cornflour (cornstarch)": {
+    "uk": {
+      "status": "everyday",
+      "note": "Brown & Polson -- the standard UK cornflour brand."
+    }
+  },
+  "Safford’s Bourbon vanilla extract": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any pure vanilla extract, e.g. Nielsen-Massey."
+    }
+  },
+  "Nola full-egg mayonnaise (not salad dressing)": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any full-egg mayonnaise -- Hellmann's is the closest widely-available match in richness."
+    }
+  },
+  "Rhodes baby gherkins or dill pickles": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any baby gherkins or dill pickles, supermarket own-brand is fine."
+    }
+  },
+  "Nature’s Buzz raw honey": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any raw or clear honey."
+    }
+  },
+  "Exotic Foods sesame oil": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any toasted sesame oil, e.g. Clearspring or an Asian grocer's own-brand."
+    }
+  },
+  "Tastic long-grain white rice": {
+    "uk": {
+      "status": "everyday",
+      "note": "Any long-grain white rice, e.g. Tilda."
+    }
+  },
+  "Smoking material — wood chips, or Tastic rice + Huletts brown sugar + Joko tea": {
+    "uk": {
+      "status": "everyday",
+      "note": "This recipe offers two smoking methods, both easy in the UK: wood chips for a smoker/BBQ are widely sold there (hardware shops, Amazon, BBQ suppliers); for the stovetop-in-a-pot method, use any long-grain rice in place of Tastic rice, any light or dark brown sugar (e.g. Tate & Lyle) in place of Huletts brown sugar, and any UK black tea (e.g. PG Tips or Yorkshire Tea) in place of Joko tea."
+    }
+  }
 }

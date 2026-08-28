@@ -203,7 +203,7 @@
     padding:0.5rem 0 0.4rem;
     margin:0;
     border-bottom:1px solid var(--border);
-    display:flex; align-items:center; justify-content:space-between; gap:0.6rem;
+    display:flex; align-items:center; justify-content:flex-start; gap:0.6rem;
   }
   :root[data-theme="dark"] h2.group-title{ color:var(--accent); }
   @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) h2.group-title{ color:var(--accent); } }
@@ -211,14 +211,15 @@
   .collapsible-toggle{
     display:inline-flex; align-items:center; justify-content:center;
     width:1.7rem; height:1.7rem; min-width:1.7rem; flex-shrink:0;
-    border-radius:50%; border:none; padding:0; margin:0;
+    border-radius:50%; border:none; padding:0; margin:0 0 0 auto;
     background:#000; color:#fff;
     font-weight:700; font-size:1.05rem; line-height:1;
     cursor:pointer;
   }
+  .group-progress + .collapsible-toggle{ margin-left:0; }
   .collapsible-body.collapsed{ display:none; }
 
-  .group-progress{ display:inline-flex; align-items:center; flex-shrink:0; }
+  .group-progress{ display:inline-flex; align-items:center; flex-shrink:0; margin-left:auto; }
   .group-progress-track{
     display:block; width:44px; height:5px; border-radius:3px;
     background:var(--border); overflow:hidden;
@@ -951,8 +952,11 @@
       <span class="settings-field-label">Country</span>
       <select id="settings-country">
         <option value="sa">South Africa</option>
-        <option value="us">United States</option>
+        <option value="au">Australia</option>
+        <option value="de">Germany</option>
+        <option value="nz">New Zealand</option>
         <option value="uk">United Kingdom</option>
+        <option value="us">United States</option>
         <option value="other">Other</option>
       </select>
     </label>
@@ -4134,12 +4138,10 @@
   function shouldTrackGroupProgress(group){
     var panel = group.closest('.panel');
     if(!panel){ return false; }
-    if(panel.dataset.panel === 'shop'){ return true; }
-    if(panel.dataset.panel !== 'cook'){ return false; }
-    var wrapper = group.closest('.collapsible-body');
-    if(!wrapper){ return true; } // Equipment: sits directly in the cook panel, no owning section-heading
-    var owningHeading = wrapper.previousElementSibling;
-    return !!(owningHeading && owningHeading.classList && owningHeading.classList.contains('section-heading') && owningHeading.textContent.indexOf('Prep') === 0);
+    // Every ticked subheading in Shop or Cook gets a progress bar --
+    // Equipment, Prep, and Cooking Instructions groups alike -- so a
+    // new subheading never has to be special-cased in here again.
+    return panel.dataset.panel === 'shop' || panel.dataset.panel === 'cook';
   }
   function setupGroupProgress(){
     document.querySelectorAll('section.group').forEach(function(group){
@@ -4180,7 +4182,7 @@
     var COUNTRY_KEY = 'capetable-settings-country-v1';
     var CITY_KEY = 'capetable-settings-city-v1';
     var DONE_KEY = 'capetable-settings-done-v1';
-    var COUNTRY_TO_SCALE = { sa: 'sa', us: 'us', uk: 'uk', other: 'metric' };
+    var COUNTRY_TO_SCALE = { sa: 'sa', us: 'us', uk: 'uk', au: 'metric', nz: 'metric', de: 'metric', other: 'metric' };
 
     var backdrop = document.getElementById('settings-backdrop');
     var modal = document.getElementById('settings-modal');
@@ -4250,7 +4252,7 @@
     });
   })();
 
-  // ---- Location-aware Shop substitutes (pilot: United Kingdom only) ----
+  // ---- Location-aware Shop substitutes (UK, US, Australia, New Zealand, Germany) ----
   // Reads the country already saved by the popup above. Loads
   // ingredients-db.json once; if that fetch fails (e.g. no connection),
   // the feature just stays quiet -- same pattern as the app's own
@@ -4259,6 +4261,14 @@
     var SUBST_ON_KEY = 'capetable-show-substitutes-v1';
     var COUNTRY_KEY = 'capetable-settings-country-v1';
     var db = null;
+    var DATA_COUNTRIES = ['uk', 'us', 'au', 'nz', 'de'];
+    var COUNTRY_LABELS = {
+      uk: { inText: 'the UK', short: 'UK' },
+      us: { inText: 'the US', short: 'US' },
+      au: { inText: 'Australia', short: 'Australia' },
+      nz: { inText: 'New Zealand', short: 'New Zealand' },
+      de: { inText: 'Germany', short: 'Germany' }
+    };
 
     function safeGetPlain(key){
       try{ return localStorage.getItem(key) || ''; }catch(e){ return ''; }
@@ -4279,7 +4289,7 @@
       clearNotes(recipeEl);
       if(!isOn() || !db){ return; }
       var country = getCountry();
-      if(country !== 'uk'){ return; } // pilot only covers the UK so far
+      if(DATA_COUNTRIES.indexOf(country) === -1){ return; } // no substitutes researched for this country yet
       var boxes = recipeEl.querySelectorAll('.panel[data-panel="shop"] input[data-store="shop"]');
       boxes.forEach(function(box){
         var label = box.closest('label');
@@ -4293,8 +4303,9 @@
         if(!info){ return; }
         var note = document.createElement('span');
         note.className = 'subst-note subst-status-' + info.status;
-        var prefix = info.status === 'native' ? 'Already sold in the UK \u2014 '
-          : (info.status === 'specialty' ? 'UK: ' : 'UK equivalent: ');
+        var label = COUNTRY_LABELS[country] || { inText: country, short: country };
+        var prefix = info.status === 'native' ? 'Already sold in ' + label.inText + ' \u2014 '
+          : (info.status === 'specialty' ? label.short + ': ' : label.short + ' equivalent: ');
         note.textContent = prefix + info.note;
         textEl.appendChild(note);
       });
@@ -4305,7 +4316,7 @@
     }
 
     function addToggleButtons(){
-      var hasData = (getCountry() === 'uk');
+      var hasData = (DATA_COUNTRIES.indexOf(getCountry()) !== -1);
       document.querySelectorAll('.panel[data-panel="shop"] .progress-wrap').forEach(function(wrap){
         var existing = wrap.querySelector('[data-subst-toggle]');
         if(!hasData){ if(existing){ existing.remove(); } return; }

@@ -2,332 +2,1185 @@
   "_meta": {
     "purpose": "Location-aware shopping substitutes for The Cape Table. Keyed by the exact ingredient-name text as it appears in a recipe's Shop tab (before the quantity). Looked up by the app when a visitor's stored country has an entry below.",
     "countries_covered": [
-      "uk"
+      "sa",
+      "uk",
+      "us",
+      "au",
+      "nz",
+      "de"
     ],
     "status_meanings": {
       "native": "Already a native/mainstream product in that country -- nothing to substitute, buy it as named.",
       "specialty": "The real South African product is orderable there, usually via a specialty importer -- an everyday supermarket alternative is also given for anyone who'd rather not order in.",
       "everyday": "An ordinary South African supermarket brand with no import route researched -- only a normal local-shelf equivalent is given."
     },
-    "pilot_note": "Built 2026-08-28 from the 7 live Cape Table recipes, United Kingdom only. Reviewed by Koot before being wired into the app.",
+    "note": "Built 2026-08-28 from the 7 live Cape Table recipes. United Kingdom was the initial pilot; United States, Australia, New Zealand and Germany were added the same day, each researched separately. Reviewed by Koot before being wired into the app. South Africa itself needs no entries -- every ingredient is already native there.",
     "updated": "2026-08-28"
   },
   "Maggi Lazenby Worcester Sauce": {
     "uk": {
       "status": "specialty",
       "note": "Orderable from South African specialty shops in the UK (e.g. Best Biltong, Weston Biltong Company). Everyday alternative: Lea & Perrins -- the standard UK Worcestershire sauce."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "Sold by Welkom USA and Aubergine Foods, US-based South African grocery importers. Everyday alternative: Lea & Perrins -- the standard US Worcestershire sauce, in every supermarket."
+    },
+    "au": {
+      "status": "specialty",
+      "note": "Orderable from South African specialty shops such as Biltong & Boerewors (biltongandboerewors.com.au), which stocks the 250ml and 500ml bottles. Everyday alternative: Lea & Perrins -- the standard Worcestershire sauce on Coles and Woolworths shelves."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "Orderable from South African specialty shops in NZ -- Something From Home stocks Maggi Lazenby Worcestershire Sauce directly in 500ml and 5L. Everyday alternative: Lea & Perrins, the standard Worcestershire sauce on New Zealand supermarket shelves."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "Maggi is a huge brand in Germany, but German Maggi doesn't sell this Worcester sauce -- Maggi Würze is a completely different seasoning sauce, not Worcestershire. The real substitute is itself mainstream in Germany: Lea & Perrins Worcestershire sauce is stocked directly by REWE (shop.rewe.de) and widely on Amazon.de and Kaufland, sold as \"Worcestersauce\"."
     }
   },
   "Koo chopped tomatoes": {
     "uk": {
       "status": "specialty",
       "note": "Orderable from South African specialty shops in the UK (e.g. The South African Spaza Shop). Everyday alternative: any tinned chopped tomatoes, e.g. Napolina."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "Koo's canned range is carried by South African specialty importers in the US such as Aubergine Foods and Welkom USA. Everyday alternative: any canned diced or crushed tomatoes, e.g. Hunt's, Muir Glen, or a supermarket own-brand."
+    },
+    "au": {
+      "status": "specialty",
+      "note": "The Koo tinned range is carried by Australian South African grocers such as Springbok Delights and The South African Shop. Everyday alternative: any supermarket tin of chopped tomatoes -- Coles/Woolworths own-brand or Mutti are fine."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "The Koo range is carried by South African grocers in NZ such as Something From Home and SA Shop NZ. Everyday alternative: Wattie's tinned chopped tomatoes -- the classic Kiwi brand -- or any supermarket own-brand tin."
+    },
+    "de": {
+      "status": "specialty",
+      "note": "Koo tinned goods are carried by South African specialty importers serving Germany such as saffashop.eu (tinned foods range) and africanheart.de. Everyday alternative: any German tinned chopped tomatoes (gehackte/passierte Tomaten), e.g. Mutti or a supermarket own-brand."
     }
   },
   "Mrs Balls Apricot Chutney": {
     "uk": {
       "status": "specialty",
       "note": "Sold directly by Tesco and on Amazon UK -- the easiest of the South African brands in this app to find in the UK. Everyday alternative: Branston fruity chutney, or a mango chutney such as Patak's."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "The easiest South African brand in this app to find in the US -- sold directly on Amazon.com, plus via Aubergine Foods, Welkom USA, Dutchy's, and biltongus.com. Everyday alternative: a mango or fruit chutney such as Patak's Major Grey's-style chutney."
+    },
+    "au": {
+      "status": "specialty",
+      "note": "Sold directly by both Coles and Woolworths online (470g) -- the easiest of the South African brands in this app to find in Australia. Everyday alternative: Branston fruity chutney, or a mango chutney such as Patak's."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "Widely stocked by South African shops in NZ -- Something From Home, SA Shop NZ (Auckland) and Safari Biltong all sell it online. Everyday alternative: a fruit chutney such as Wattie's, or a mango chutney like Patak's."
+    },
+    "de": {
+      "status": "specialty",
+      "note": "Genuinely easy to find in Germany -- REWE sells it directly online (shop.rewe.de), and it's also on Amazon.de and via South African specialty shops like AfricanHeart, SA Goodies and saffashop.eu. Everyday alternative: a German fruchtig-scharfes Chutney, or a mango chutney such as Patak's."
     }
   },
   "Koo Apricot Jam": {
     "uk": {
       "status": "specialty",
       "note": "Orderable from South African specialty shops in the UK. Everyday alternative: any apricot jam, e.g. Bonne Maman."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "Sold as \"Koo Smooth Apricot Jam\" via biltongus.com and stocked in the Koo ranges at Aubergine Foods and Welkom USA. Everyday alternative: any apricot preserves/jam, e.g. Smucker's."
+    },
+    "au": {
+      "status": "specialty",
+      "note": "Stocked by South African grocers in Australia (e.g. The South African Shop, SAproducts.com.au). Everyday alternative: any smooth apricot jam -- IXL or a supermarket own-brand is fine."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "Sold by South African specialty importers in NZ such as Inside Africa NZ. Everyday alternative: any apricot jam, e.g. Barker's of Geraldine or a supermarket own-brand."
+    },
+    "de": {
+      "status": "specialty",
+      "note": "Orderable from South African specialty shops serving Germany such as saffashop.eu. Everyday alternative: ordinary Aprikosenkonfitüre/-marmelade, e.g. Schwartau or Zentis."
     }
   },
   "Koo apricot jam": {
     "uk": {
       "status": "specialty",
       "note": "Orderable from South African specialty shops in the UK. Everyday alternative: any apricot jam, e.g. Bonne Maman."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "Sold as \"Koo Smooth Apricot Jam\" via biltongus.com and stocked in the Koo ranges at Aubergine Foods and Welkom USA. Everyday alternative: any apricot preserves/jam, e.g. Smucker's."
+    },
+    "au": {
+      "status": "specialty",
+      "note": "Stocked by South African grocers in Australia (e.g. The South African Shop, SAproducts.com.au). Everyday alternative: any smooth apricot jam -- IXL or a supermarket own-brand is fine."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "Sold by South African specialty importers in NZ such as Inside Africa NZ. Everyday alternative: any apricot jam, e.g. Barker's of Geraldine or a supermarket own-brand."
+    },
+    "de": {
+      "status": "specialty",
+      "note": "Orderable from South African specialty shops serving Germany such as saffashop.eu. Everyday alternative: ordinary Aprikosenkonfitüre/-marmelade, e.g. Schwartau or Zentis."
     }
   },
   "Raja medium curry powder": {
     "uk": {
       "status": "specialty",
       "note": "Orderable from South African specialty shops in the UK (e.g. biltong.co.uk, The South African Spaza Shop). Everyday alternative: a UK \"medium\" curry powder, e.g. Bolst's -- worth a side-by-side taste, since Raja runs sweeter/milder than most UK medium blends."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "Sold as \"Robertson's Rajah Medium Curry Powder\" directly by Aubergine Foods. Everyday alternative: McCormick or Sun Brand curry powder from any US supermarket."
+    },
+    "au": {
+      "status": "specialty",
+      "note": "Sold as \"Rajah Curry\" by South African specialty shops such as The South African Shop (thesouthafricanshop.com.au). Everyday alternative: Keen's curry powder, standard on the Coles/Woolworths spice shelf."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "Rajah curry powder (in several heat levels) is sold by Something From Home, SA Shop NZ and Boerewors NZ. Everyday alternative: Keen's Curry Powder, the standard mild/medium curry powder on NZ supermarket shelves."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "Raja itself isn't stocked in Germany. Use an ordinary medium curry powder from the spice aisle (Ostmann, Fuchs) or an Indian-style one from an Asia-/Inder-Laden or Amazon.de, e.g. TRS or Deep brand curry powder."
     }
   },
   "Safari white or brown vinegar": {
     "uk": {
       "status": "specialty",
       "note": "Orderable from South African specialty shops in the UK (e.g. Best Biltong). Everyday alternative: malt vinegar."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "Both Safari White Vinegar and Safari Brown Spirit Vinegar are sold by Aubergine Foods. Everyday alternative: plain distilled white vinegar (e.g. Heinz) for the white, or apple cider vinegar for the brown -- Safari's is a spirit vinegar, not a wine vinegar."
+    },
+    "au": {
+      "status": "everyday",
+      "note": "No Australian importer found for the Safari brand -- use any white (spirit) or brown (malt) vinegar, e.g. a Coles/Woolworths own-brand."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "Safari Brown Spirit Vinegar is stocked directly by Something From Home, with the wider Safari range orderable through the same South African shops. Everyday alternative: a plain white or malt/spirit vinegar from the supermarket baking aisle, e.g. Chef's Choice or Craig's."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "Safari isn't sold in Germany. For white vinegar use German Weißweinessig; for the brown variety use a Branntweinessig (spirit vinegar), which is closer in colour and sharpness -- both are supermarket staples (Hengstenberg, Kühne)."
     }
   },
   "Safari white wine vinegar": {
     "uk": {
       "status": "specialty",
       "note": "Orderable from South African specialty shops in the UK. Everyday alternative: any plain white wine vinegar."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "Sold as Safari White Vinegar by Aubergine Foods -- note it's a clear spirit vinegar, not a true wine vinegar, despite the common label wording. Everyday alternative: plain distilled white vinegar (e.g. Heinz) from any supermarket."
+    },
+    "au": {
+      "status": "everyday",
+      "note": "No Australian importer found for the Safari brand -- use any white wine vinegar, e.g. a Coles/Woolworths own-brand."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "The Safari vinegar range is sold through Something From Home, though the white wine style specifically may need ordering in. Everyday alternative: any white wine vinegar, e.g. Chef's Choice."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "Use ordinary German Weißweinessig (white wine vinegar) -- Hengstenberg or a supermarket own-brand is fine."
     }
   },
   "Safari brown vinegar": {
     "uk": {
       "status": "specialty",
       "note": "Orderable from South African specialty shops in the UK (e.g. Best Biltong). Everyday alternative: malt vinegar."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "Sold as Safari Brown Spirit Vinegar directly by Aubergine Foods. Everyday alternative: apple cider vinegar or malt vinegar, whichever is on hand."
+    },
+    "au": {
+      "status": "everyday",
+      "note": "No Australian importer found for the Safari brand -- use malt vinegar, the Australian equivalent to South African \"brown vinegar\"."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "Directly confirmed in stock: Safari Brown Spirit Vinegar 750ml at Something From Home. Everyday alternative: a plain brown/malt vinegar, e.g. Craig's or a supermarket own-brand."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "Germany doesn't really sell a \"brown vinegar\" as such -- the closest match is Branntweinessig (spirit vinegar), which has a similar sharp, malty edge and is sold everywhere (Hengstenberg, Kühne)."
     }
   },
   "Ina Paarman chicken or vegetable stock": {
     "uk": {
       "status": "specialty",
       "note": "Sold on Amazon UK directly, as well as South African specialty shops. Everyday alternative: any stock cube or powder, e.g. Knorr or Oxo."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "Ina Paarman's range (stocks, seasonings, sauces) is carried by Aubergine Foods. Everyday alternative: Better Than Bouillon chicken or vegetable base, or Knorr stock cubes."
+    },
+    "au": {
+      "status": "specialty",
+      "note": "Well stocked by South African grocers across Australia -- The South African Shop, SAproducts.com.au, Springbok Foods, and several biltong/butchery suppliers all carry the range. Everyday alternative: Massel stock powder (no added MSG) or a supermarket own-brand stock powder."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "Ina Paarman's seasoning range (Chicken Spice, Vegetable Spice, Braai & Grill) is sold by Something From Home and Safari Meats & SA Shop, with her stocks orderable the same way. Everyday alternative: Massel or Continental stock powder/cubes, both common in NZ supermarkets."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "Ina Paarman isn't sold in Germany. Use an ordinary German stock/bouillon, e.g. Knorr or Maggi Fond/Brühe (chicken = Hühnerbrühe, vegetable = Gemüsebrühe), powder or cube as the recipe needs."
     }
   },
   "Colman’s American Mild prepared yellow mustard, smooth": {
     "uk": {
       "status": "native",
       "note": "Colman's is a British brand (Colman's of Norwich) -- already on every UK supermarket shelf, nothing to substitute."
+    },
+    "us": {
+      "status": "everyday",
+      "note": "Colman's US products are the classic hot English mustard, not this smooth mild yellow style, so buying Colman's brand here would give the wrong result. What this SA product is actually imitating is standard American yellow mustard -- French's Classic Yellow or Heinz Yellow Mustard, in every US supermarket."
+    },
+    "au": {
+      "status": "everyday",
+      "note": "Colman's is on every Coles/Woolworths shelf in Australia, but mostly as English mustard (hot, powder or prepared) rather than the American-style mild yellow line sold in South Africa. Everyday alternative: French's Classic Yellow American Mustard, widely stocked at Coles and Woolworths."
+    },
+    "nz": {
+      "status": "native",
+      "note": "Colman's is a well-known brand on New Zealand supermarket shelves (New World, PAK'nSAVE and FreshChoice all stock it), though the NZ range leans toward English and Dijon mustard rather than a dedicated mild American-yellow style. For that specific milder yellow style, a supermarket own-brand mild mustard is the closest everyday match."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "This mild American-style yellow mustard (different from Colman's English mustard powder, which IS sold in Germany via Amazon.de and Kaufland's marketplace) isn't stocked as such. Use a mild German yellow Senf, e.g. Bautz'ner or Löwensenf Extra mild, or order French's Classic Yellow Mustard via Amazon.de for the closer American match."
     }
   },
   "Amoy Japanese teriyaki sauce": {
     "uk": {
       "status": "native",
       "note": "Sold directly by Tesco and Sainsbury's -- already mainstream in the UK, nothing to substitute."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "Amoy Japanese-style Teriyaki Sauce is sold on Amazon.com and via US Asian grocery sites like Yami. Everyday alternative: any mainstream US teriyaki sauce, e.g. Kikkoman Teriyaki Sauce, Soy Vay Veri Veri Teriyaki, or Trader Joe's Island Soyaki."
+    },
+    "au": {
+      "status": "native",
+      "note": "Amoy Japanese Teriyaki Sauce is a normal Coles/Woolworths product in Australia (sold as both a bottled sauce and a marinade) -- nothing to substitute, buy it as named."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "Real Amoy teriyaki sauce turns up at NZ Asian grocers (e.g. Fruit World in Auckland, supplied via importer JFC New Zealand) rather than mainstream supermarkets. Everyday alternative: any bottled teriyaki sauce from the supermarket sauces aisle, e.g. Lee Kum Kee or Wattie's."
+    },
+    "de": {
+      "status": "native",
+      "note": "Amoy is the identical product in Germany too -- sold in the Asia aisle of larger supermarkets such as Kaufland, plus Asia-Läden and Amazon.de. Nothing to substitute."
     }
   },
   "Kikkoman soy sauce": {
     "uk": {
       "status": "native",
       "note": "Kikkoman is sold in every UK supermarket -- nothing to substitute."
+    },
+    "us": {
+      "status": "native",
+      "note": "Kikkoman is sold in essentially every US supermarket -- nothing to substitute."
+    },
+    "au": {
+      "status": "native",
+      "note": "Kikkoman is sold in every Australian supermarket -- nothing to substitute."
+    },
+    "nz": {
+      "status": "native",
+      "note": "Kikkoman is sold in every major NZ supermarket (New World, PAK'nSAVE) -- nothing to substitute."
+    },
+    "de": {
+      "status": "native",
+      "note": "Kikkoman is a mainstream product in German supermarkets -- stocked by both REWE and EDEKA (via EDEKA24) among others. Nothing to substitute."
     }
   },
   "Kikkoman mirin": {
     "uk": {
       "status": "native",
       "note": "Kikkoman is sold in every UK supermarket -- nothing to substitute."
+    },
+    "us": {
+      "status": "native",
+      "note": "Kikkoman Mirin (labeled Manjo Aji-Mirin or Kotteri Mirin) is stocked at Kroger, Safeway, and Walmart -- a genuine mainstream US supermarket product, not a specialty item."
+    },
+    "au": {
+      "status": "native",
+      "note": "Kikkoman Manjo Mirin is stocked at Woolworths and widely available elsewhere -- nothing to substitute."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "Kikkoman mirin is imported into NZ (via importer JFC New Zealand) and found at Asian grocers rather than mainstream supermarkets. Everyday alternative: any mirin from an Asian grocer, or a dry sherry with a pinch of sugar in a pinch."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "Kikkoman's mirin-style seasoning (sold in Germany as \"Mirin-Art Gewürz\"/Aji-Mirin) isn't a normal REWE/EDEKA shelf item -- it's found at Asia-Läden or Asian online shops (asiafoodland.de, asiashoponline.de) and on Amazon.de."
     }
   },
   "Bisto gravy powder": {
     "uk": {
       "status": "native",
       "note": "Bisto is a British brand -- already on every UK supermarket shelf, nothing to substitute."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "A British, not South African, brand -- but easy to get in the US regardless: sold on Walmart.com and Amazon, and via British specialty shops like British Food Depot and British Essentials. Everyday alternative: an American packet gravy mix, e.g. McCormick Brown Gravy Mix or Knorr Gravy."
+    },
+    "au": {
+      "status": "native",
+      "note": "Bisto (sold in Australia as gravy granules) is a normal Coles, Woolworths and IGA product -- nothing to substitute."
+    },
+    "nz": {
+      "status": "native",
+      "note": "Bisto Gravy Mix is sold directly by Woolworths NZ (formerly Countdown) -- a genuine New Zealand supermarket staple, nothing to substitute."
+    },
+    "de": {
+      "status": "specialty",
+      "note": "Orderable from British specialty shops that ship to Germany, e.g. British Corner Shop, plus the Germany-based Michelles Specialities (greatbritishfood.de) and Amazon.de. Everyday alternative: a German gravy/sauce mix such as Maggi Sauce Fix Bratensoße or Knorr Bratensauce granules."
     }
   },
   "Clover milk": {
     "uk": {
       "status": "everyday",
       "note": "Any whole/full-fat milk."
+    },
+    "us": {
+      "status": "everyday",
+      "note": "Fresh dairy doesn't ship -- just use any whole milk from a US supermarket, national brand or store brand."
+    },
+    "au": {
+      "status": "everyday",
+      "note": "Fresh dairy doesn't travel -- use any full-cream milk, e.g. Coles/Woolworths own-brand or Dairy Farmers."
+    },
+    "nz": {
+      "status": "everyday",
+      "note": "Fresh dairy isn't imported from South Africa for biosecurity reasons. Use any full-cream milk from the supermarket, e.g. Anchor or Meadow Fresh -- New Zealand's own major milk brands."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "Any German Vollmilch (whole/full-cream milk, 3.5% fat) -- any dairy brand or supermarket own-label is fine."
     }
   },
   "Clover full-cream milk": {
     "uk": {
       "status": "everyday",
       "note": "Any whole/full-fat milk."
+    },
+    "us": {
+      "status": "everyday",
+      "note": "\"Full-cream\" is the SA/UK term for what the US calls whole milk (about 3.25% fat) -- any brand or store brand works."
+    },
+    "au": {
+      "status": "everyday",
+      "note": "Fresh dairy doesn't travel -- use any full-cream milk, e.g. Coles/Woolworths own-brand or Dairy Farmers."
+    },
+    "nz": {
+      "status": "everyday",
+      "note": "Fresh dairy isn't imported from South Africa for biosecurity reasons. Use any full-cream milk from the supermarket, e.g. Anchor or Meadow Fresh -- New Zealand's own major milk brands."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "Use German Vollmilch (3,5% Fett) -- any dairy brand or supermarket own-label."
     }
   },
   "Mooiriver salted butter": {
     "uk": {
       "status": "everyday",
       "note": "Any salted butter, e.g. Lurpak."
+    },
+    "us": {
+      "status": "everyday",
+      "note": "Any salted butter, e.g. Land O'Lakes or a store brand."
+    },
+    "au": {
+      "status": "everyday",
+      "note": "Fresh dairy doesn't travel -- use any salted butter, e.g. Western Star or a supermarket own-brand."
+    },
+    "nz": {
+      "status": "everyday",
+      "note": "Fresh butter isn't imported from South Africa. New Zealand has its own world-famous dairy brand for this: Anchor Salted Butter (Fonterra) is the obvious, easy-to-find everyday choice."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "German butter is mostly sold unsalted by default -- look for one labelled \"gesalzene Butter\" (e.g. Kerrygold Salted, Président Salted) or a French-style demi-sel butter, both widely stocked."
     }
   },
   "Mooiriver butter": {
     "uk": {
       "status": "everyday",
       "note": "Any salted butter, e.g. Lurpak."
+    },
+    "us": {
+      "status": "everyday",
+      "note": "Any butter (unsalted unless the recipe says otherwise), e.g. Land O'Lakes or a store brand."
+    },
+    "au": {
+      "status": "everyday",
+      "note": "Fresh dairy doesn't travel -- use any butter, e.g. Western Star or a supermarket own-brand."
+    },
+    "nz": {
+      "status": "everyday",
+      "note": "Fresh butter isn't imported from South Africa. Use Anchor Butter (Fonterra) -- New Zealand's own iconic butter brand, sold everywhere."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "Any German Butter, e.g. Kerrygold, Landliebe, or a supermarket own-brand -- unsalted (\"ungesalzen\") unless the recipe calls for salted."
     }
   },
   "Mooiriver butter, optional": {
     "uk": {
       "status": "everyday",
       "note": "Any salted butter, e.g. Lurpak."
+    },
+    "us": {
+      "status": "everyday",
+      "note": "Optional in this recipe -- if using, any butter such as Land O'Lakes or a store brand is fine."
+    },
+    "au": {
+      "status": "everyday",
+      "note": "Fresh dairy doesn't travel -- use any butter, e.g. Western Star or a supermarket own-brand, or simply omit as the recipe allows."
+    },
+    "nz": {
+      "status": "everyday",
+      "note": "Optional in this recipe -- if using, Anchor Butter (Fonterra), New Zealand's own well-known butter brand, is the natural choice."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "Any German Butter, e.g. Kerrygold, Landliebe, or a supermarket own-brand -- unsalted (\"ungesalzen\") unless the recipe calls for salted."
     }
   },
   "Snowflake cake flour": {
     "uk": {
       "status": "everyday",
       "note": "Any plain/cake flour, e.g. Doves Farm."
+    },
+    "us": {
+      "status": "everyday",
+      "note": "Any cake flour, e.g. Swans Down or Softasilk -- both widely sold in US supermarkets."
+    },
+    "au": {
+      "status": "everyday",
+      "note": "\"Cake flour\" isn't a standard Australian category -- use White Wings Plain Flour or any plain flour."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "Snowflake, South Africa's household flour brand, is stocked by Something From Home. Everyday alternative: Edmonds plain/standard flour -- New Zealand's own iconic baking brand."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "German Weizenmehl Type 405 is the closest match to a South African cake/pastry flour -- finely milled and low-protein, sold by every supermarket."
     }
   },
   "Huletts white sugar": {
     "uk": {
       "status": "everyday",
       "note": "Any white/granulated sugar, e.g. Tate & Lyle."
+    },
+    "us": {
+      "status": "everyday",
+      "note": "Any granulated white sugar, e.g. Domino or C&H."
+    },
+    "au": {
+      "status": "everyday",
+      "note": "Any white sugar, e.g. CSR or a supermarket own-brand."
+    },
+    "nz": {
+      "status": "everyday",
+      "note": "No dedicated NZ import route found for Huletts. Use Chelsea White Sugar -- New Zealand's own dominant sugar brand, sold everywhere."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "Ordinary German white granulated sugar (Zucker/Kristallzucker), e.g. Südzucker or any supermarket own-brand."
     }
   },
   "Huletts caster sugar": {
     "uk": {
       "status": "everyday",
       "note": "Any caster sugar, e.g. Tate & Lyle."
+    },
+    "us": {
+      "status": "everyday",
+      "note": "US recipes call this superfine sugar rather than \"caster sugar\" -- look for C&H Superfine, or pulse regular granulated sugar briefly in a food processor."
+    },
+    "au": {
+      "status": "everyday",
+      "note": "Any caster sugar, e.g. CSR or a supermarket own-brand."
+    },
+    "nz": {
+      "status": "everyday",
+      "note": "No dedicated NZ import route found for Huletts. Use Chelsea Caster Sugar, the standard NZ caster sugar."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "Germany doesn't sell caster sugar as such -- the closest match is a very fine granulated sugar sold as \"Feiner Zucker\", \"Streuzucker\" or Südzucker's \"Feinster Backzucker\". Don't substitute Puderzucker (icing/powdered sugar), which is a different texture."
     }
   },
   "Huletts brown sugar": {
     "uk": {
       "status": "everyday",
       "note": "Any light or dark brown sugar, e.g. Tate & Lyle."
+    },
+    "us": {
+      "status": "everyday",
+      "note": "Light or dark brown sugar, e.g. Domino or C&H, per whichever the recipe needs."
+    },
+    "au": {
+      "status": "everyday",
+      "note": "Any brown sugar, e.g. CSR or a supermarket own-brand."
+    },
+    "nz": {
+      "status": "everyday",
+      "note": "No dedicated NZ import route found for Huletts. Use Chelsea Brown Sugar, New Zealand's standard brown sugar brand."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "German brauner Zucker (brown sugar), e.g. Südzucker -- any supermarket brand is fine."
     }
   },
   "Anchor instant yeast": {
     "uk": {
       "status": "everyday",
       "note": "Any instant/fast-action dried yeast, e.g. Allinson's. Note: this is a South African yeast brand (Lesaffre) -- unrelated to the New Zealand \"Anchor\" dairy brand also sold in the UK, just a same-name coincidence."
+    },
+    "us": {
+      "status": "everyday",
+      "note": "Any instant/rapid-rise dried yeast, e.g. Fleischmann's RapidRise, Red Star Quick Rise, or SAF Instant Yeast. Note: this is a South African yeast brand (Lesaffre), unrelated to any other Anchor-branded product on US shelves -- just a same-name coincidence."
+    },
+    "au": {
+      "status": "specialty",
+      "note": "Orderable from South African specialty shops such as Cape To Cairo (capetocairo.com.au). Everyday alternative: any instant/dried yeast, e.g. Lowan or Tandaco. Note: this is a South African yeast brand (Lesaffre) -- unrelated to the New Zealand \"Anchor\" dairy brand also sold in Australia, just a same-name coincidence."
+    },
+    "nz": {
+      "status": "everyday",
+      "note": "This is a South African yeast brand (Lesaffre) -- a pure same-name coincidence with New Zealand's own famous Anchor dairy/butter brand (Fonterra); they're completely unrelated companies. Use any instant/fast-action dried yeast, e.g. Edmonds Surebake."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "Ordinary German Trockenhefe (instant dried yeast), e.g. Dr. Oetker or Ruf, sold in every supermarket's baking aisle."
     }
   },
   "B-well sunflower oil, for frying": {
     "uk": {
       "status": "everyday",
       "note": "Any sunflower oil, supermarket own-brand is fine."
+    },
+    "us": {
+      "status": "everyday",
+      "note": "Any neutral sunflower or vegetable oil suited to frying, e.g. Crisco or Wesson."
+    },
+    "au": {
+      "status": "everyday",
+      "note": "No Australian importer found for B-well -- use any sunflower oil, e.g. Crisco or a supermarket own-brand."
+    },
+    "nz": {
+      "status": "everyday",
+      "note": "B-well's mayonnaise is sold at Something From Home, but its cooking oils aren't specifically confirmed in NZ. Use any plain sunflower oil for frying, e.g. a supermarket own-brand."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "Ordinary German Sonnenblumenöl, any brand or supermarket own-label."
     }
   },
   "B-well neutral oil (sunflower or canola)": {
     "uk": {
       "status": "everyday",
       "note": "Any sunflower or rapeseed oil, supermarket own-brand is fine."
+    },
+    "us": {
+      "status": "everyday",
+      "note": "Any neutral oil -- canola or vegetable oil, e.g. Crisco or Wesson, or a store brand."
+    },
+    "au": {
+      "status": "everyday",
+      "note": "No Australian importer found for B-well -- use any neutral sunflower or canola oil, e.g. a supermarket own-brand."
+    },
+    "nz": {
+      "status": "everyday",
+      "note": "No NZ import route confirmed for B-well oils specifically. Use any neutral sunflower or canola oil from the supermarket, e.g. Pams or a store own-brand."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "Sonnenblumenöl (sunflower) or Rapsöl (canola/rapeseed -- actually the more common everyday cooking oil in Germany) -- any brand."
     }
   },
   "Robertsons fine white pepper": {
     "uk": {
       "status": "everyday",
       "note": "Any white pepper, e.g. Schwartz."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "The Robertson's spice range is sold by Aubergine Foods and Welkom USA. Everyday alternative: McCormick ground white pepper."
+    },
+    "au": {
+      "status": "specialty",
+      "note": "Robertsons' spice range is stocked by South African grocers such as The South African Shop. Everyday alternative: any ground white pepper, e.g. Masterfoods."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "Robertsons has a dedicated collection at Something From Home (spice shakers, refills and more). Everyday alternative: Gregg's ground white pepper, a well-known NZ spice brand sold at FreshChoice, New World and other supermarkets."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "Ordinary German weißer Pfeffer, fein gemahlen (finely ground white pepper) -- Ostmann, Fuchs or a supermarket own-brand."
     }
   },
   "Robertsons white pepper": {
     "uk": {
       "status": "everyday",
       "note": "Any white pepper, e.g. Schwartz."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "The Robertson's spice range is sold by Aubergine Foods and Welkom USA. Everyday alternative: McCormick ground white pepper."
+    },
+    "au": {
+      "status": "specialty",
+      "note": "Robertsons' spice range is stocked by South African grocers such as The South African Shop. Everyday alternative: any ground white pepper, e.g. Masterfoods."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "Robertsons has a dedicated collection at Something From Home. Everyday alternative: Gregg's ground white pepper."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "Ordinary German weißer Pfeffer (white pepper), whole or ground as the recipe needs -- Ostmann, Fuchs, or own-brand."
     }
   },
   "Robertsons ground coriander": {
     "uk": {
       "status": "everyday",
       "note": "Any ground coriander, e.g. Schwartz."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "The Robertson's spice range is sold by Aubergine Foods and Welkom USA. Everyday alternative: McCormick ground coriander."
+    },
+    "au": {
+      "status": "specialty",
+      "note": "Robertsons' spice range is stocked by South African grocers such as The South African Shop. Everyday alternative: Masterfoods ground coriander."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "Part of the Robertsons range sold by Something From Home. Everyday alternative: Gregg's ground coriander."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "German gemahlener Koriander, e.g. Ostmann, Fuchs or Alnatura."
     }
   },
   "Robertsons ground nutmeg": {
     "uk": {
       "status": "everyday",
       "note": "Any ground nutmeg, e.g. Schwartz."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "The Robertson's spice range is sold by Aubergine Foods and Welkom USA. Everyday alternative: McCormick ground nutmeg."
+    },
+    "au": {
+      "status": "specialty",
+      "note": "Robertsons' spice range is stocked by South African grocers such as The South African Shop. Everyday alternative: Masterfoods ground nutmeg."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "Available through the Robertsons range at Something From Home. Everyday alternative: Gregg's ground nutmeg."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "German gemahlene Muskatnuss, e.g. Ostmann or Fuchs."
     }
   },
   "Robertsons nutmeg, whole (for grating)": {
     "uk": {
       "status": "everyday",
       "note": "Any whole nutmeg for grating, e.g. Schwartz."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "The Robertson's spice range is sold by Aubergine Foods and Welkom USA. Everyday alternative: McCormick whole nutmeg, for grating fresh."
+    },
+    "au": {
+      "status": "specialty",
+      "note": "Robertsons' spice range is stocked by South African grocers such as The South African Shop. Everyday alternative: whole nutmeg from the Coles/Woolworths spice aisle."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "As with the ground version, Robertsons is stocked by Something From Home. Everyday alternative: any whole nutmeg for grating, e.g. Gregg's."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "German ganze Muskatnuss (whole nutmeg) for grating fresh -- sold in the spice aisle of every supermarket."
     }
   },
   "Robertsons cream of tartar": {
     "uk": {
       "status": "everyday",
       "note": "Any cream of tartar, e.g. Dr. Oetker or supermarket own-brand."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "The Robertson's spice range is sold by Aubergine Foods and Welkom USA. Everyday alternative: McCormick or Rumford cream of tartar, sold in the baking aisle of any US supermarket."
+    },
+    "au": {
+      "status": "specialty",
+      "note": "Robertsons' spice range is stocked by South African grocers such as The South African Shop. Everyday alternative: McKenzie's or Masterfoods cream of tartar, standard in the Coles/Woolworths baking aisle."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "Directly confirmed: Robertsons Cream of Tartar 12g is sold by SA Shop NZ. Everyday alternative: Edmonds Cream of Tartar, the standard NZ baking-aisle brand."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "Cream of tartar (Weinstein/Weinsteinpulver) is much less of a supermarket staple in Germany, where baking relies on Backpulver instead -- look in the Bio/Reformhaus aisle (Alnatura sells a Weinstein-Backpulver) or order online (e.g. franzoesischkochen.de, Amazon.de); a DM drugstore is also worth checking."
     }
   },
   "Robertsons turmeric": {
     "uk": {
       "status": "everyday",
       "note": "Any ground turmeric, e.g. Schwartz."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "The Robertson's spice range is sold by Aubergine Foods and Welkom USA. Everyday alternative: McCormick ground turmeric."
+    },
+    "au": {
+      "status": "specialty",
+      "note": "Robertsons' spice range is stocked by South African grocers such as The South African Shop. Everyday alternative: Masterfoods ground turmeric."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "Part of the Robertsons range at Something From Home. Everyday alternative: Gregg's ground turmeric."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "German Kurkuma (gemahlen), e.g. Fuchs, Ostmann or Alnatura."
     }
   },
   "Robertsons sweet paprika": {
     "uk": {
       "status": "everyday",
       "note": "Any sweet paprika, e.g. Schwartz."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "The Robertson's spice range is sold by Aubergine Foods and Welkom USA. Everyday alternative: McCormick sweet (not smoked or hot) paprika."
+    },
+    "au": {
+      "status": "specialty",
+      "note": "Robertsons' spice range is stocked by South African grocers such as The South African Shop. Everyday alternative: Masterfoods sweet paprika."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "Directly confirmed: Robertsons Paprika Spice Shaker is sold by SA Shop NZ. Everyday alternative: Gregg's ground paprika."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "German Paprikapulver edelsüß (sweet paprika) -- a genuine German/Hungarian pantry staple, e.g. Kotányi, Fuchs or Ostmann."
     }
   },
   "Robertsons garlic powder": {
     "uk": {
       "status": "everyday",
       "note": "Any garlic powder, e.g. Schwartz."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "The Robertson's spice range is sold by Aubergine Foods and Welkom USA. Everyday alternative: McCormick garlic powder."
+    },
+    "au": {
+      "status": "specialty",
+      "note": "Robertsons' spice range is stocked by South African grocers such as The South African Shop. Everyday alternative: Masterfoods garlic powder."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "Part of the Robertsons range at Something From Home. Everyday alternative: Gregg's garlic powder."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "German Knoblauchpulver/-granulat, any brand."
     }
   },
   "Robertsons onion powder": {
     "uk": {
       "status": "everyday",
       "note": "Any onion powder, e.g. Schwartz."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "The Robertson's spice range is sold by Aubergine Foods and Welkom USA. Everyday alternative: McCormick onion powder."
+    },
+    "au": {
+      "status": "specialty",
+      "note": "Robertsons' spice range is stocked by South African grocers such as The South African Shop. Everyday alternative: Masterfoods onion powder."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "Part of the Robertsons range at Something From Home. Everyday alternative: Gregg's onion powder."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "German Zwiebelpulver/-granulat, any brand."
     }
   },
   "Robertsons black pepper": {
     "uk": {
       "status": "everyday",
       "note": "Any black pepper, e.g. Schwartz."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "The Robertson's spice range is sold by Aubergine Foods and Welkom USA. Everyday alternative: McCormick or any supermarket ground/whole black pepper."
+    },
+    "au": {
+      "status": "specialty",
+      "note": "Robertsons' spice range is stocked by South African grocers such as The South African Shop. Everyday alternative: any ground black pepper."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "Part of the Robertsons range at Something From Home. Everyday alternative: any ground black pepper, e.g. Gregg's, or a fresh peppermill."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "Ordinary German schwarzer Pfeffer, whole or ground, any brand."
     }
   },
   "Whole Robertsons cloves (“naeltjies”)": {
     "uk": {
       "status": "everyday",
       "note": "Any whole cloves, e.g. Schwartz."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "The Robertson's spice range is sold by Aubergine Foods and Welkom USA. Everyday alternative: McCormick whole cloves -- \"naeltjies\" is simply Afrikaans for cloves, no different product involved."
+    },
+    "au": {
+      "status": "specialty",
+      "note": "Robertsons' spice range is stocked by South African grocers such as The South African Shop. Everyday alternative: whole cloves from the Coles/Woolworths spice aisle."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "Robertsons spices are sold by Something From Home. Everyday alternative: whole cloves from any supermarket spice brand, e.g. Gregg's."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "German ganze Gewürznelken (whole cloves), sold in every supermarket's spice aisle."
     }
   },
   "Cape Herb & Spice five spice": {
     "uk": {
       "status": "everyday",
       "note": "Any Chinese five spice blend, e.g. Schwartz."
+    },
+    "us": {
+      "status": "everyday",
+      "note": "No confirmed US import route for this brand (it's distributed mainly in the UK, Canada, and Australia) -- but there's no need for one: Chinese five-spice powder is a standard US spice-aisle item, e.g. McCormick Gourmet Organic Chinese Five Spice, or available at any Asian grocery store."
+    },
+    "au": {
+      "status": "specialty",
+      "note": "Cape Herb & Spice has an official exclusive Australian distributor, Rex Imports Australia, plus stockists such as The South African Shop. Everyday alternative: any Chinese five-spice powder from the Coles/Woolworths Asian aisle."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "Cape Herb & Spice products (Cape Malay Curry, Madras Curry Seasoning) are sold by SA Shop NZ. Everyday alternative: a Chinese five spice blend, e.g. Gregg's or SpicenEasy NZ."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "German Chinesisches Fünf-Gewürze-Pulver (five-spice powder), found in the spice aisle (Ostmann) or at any Asia-Laden."
     }
   },
   "Atlas coriander seed, whole": {
     "uk": {
       "status": "everyday",
       "note": "Any whole coriander seed, e.g. Schwartz."
+    },
+    "us": {
+      "status": "everyday",
+      "note": "Whole coriander seed is a standard spice-aisle item in any US supermarket, e.g. McCormick, or buy loose from a bulk-spice bin."
+    },
+    "au": {
+      "status": "everyday",
+      "note": "No Australian importer found for the Atlas brand -- use any whole coriander seed, e.g. Herbie's Spices or a supermarket own-brand."
+    },
+    "nz": {
+      "status": "everyday",
+      "note": "No NZ import route found for this South African brand. Use whole coriander seed from any supermarket spice brand or an Asian grocer's bulk bins."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "German ganze Koriandersamen (whole coriander seed), a spice-aisle staple, any brand."
     }
   },
   "Freddy Hirsch MSG, optional": {
     "uk": {
       "status": "everyday",
       "note": "Any pure MSG -- Ajinomoto is the globally recognised brand, sold in the UK especially at Asian grocers."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "The Freddy Hirsch line is sold by Aubergine Foods. Everyday alternative: plain MSG is sold in mainstream US supermarkets as Ac'cent Flavor Enhancer."
+    },
+    "au": {
+      "status": "specialty",
+      "note": "Freddy Hirsch is an established import brand for Australian biltong/butchery suppliers (e.g. Biltong & Boerewors, The Casing Boutique), though their plain MSG line specifically may need ordering from freddyhirsch.co.za. Everyday alternative: any MSG, e.g. Aji-no-Moto from an Asian grocer -- or simply omit, as it's optional."
+    },
+    "nz": {
+      "status": "everyday",
+      "note": "Freddy Hirsch's biltong/braai spice range is sold by Something From Home, but plain MSG specifically isn't confirmed there. This ingredient is optional -- if using, Ajinomoto-brand MSG is available at NZ Asian grocers."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "MSG (Mononatriumglutamat/E621) isn't a South African-only item -- the standard global brand Ajinomoto is sold via Asia-Läden, specialty stores like villagefoods.de, and Amazon.de/eBay."
     }
   },
   "Nulaid large eggs": {
     "uk": {
       "status": "everyday",
       "note": "Any large eggs."
+    },
+    "us": {
+      "status": "everyday",
+      "note": "Fresh eggs don't ship -- any large eggs from a US supermarket, store brand or a national brand like Eggland's Best, work fine."
+    },
+    "au": {
+      "status": "everyday",
+      "note": "Fresh eggs don't travel -- use any large free-range eggs from Coles/Woolworths."
+    },
+    "nz": {
+      "status": "everyday",
+      "note": "Nulaid is a South African-only brand with no NZ presence. Use any large eggs from the supermarket, e.g. Zeagold or Woodland -- New Zealand's own major egg brands."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "Ordinary German Eier Größe L (size L/large eggs), any brand from the supermarket egg shelf."
     }
   },
   "Imbo sago pearls": {
     "uk": {
       "status": "everyday",
       "note": "Sago pearls aren't brand-specific -- usually found in the world-foods aisle or an Asian grocer."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "Sold directly by Aubergine Foods. Everyday alternative: small pearl tapioca (not the large boba-style pearls), e.g. Bob's Red Mill Tapioca Pearls, or from an Asian grocery store."
+    },
+    "au": {
+      "status": "everyday",
+      "note": "No Australian importer found for the Imbo brand -- use sago or tapioca pearls from an Asian grocer."
+    },
+    "nz": {
+      "status": "everyday",
+      "note": "No NZ import route found for this South African brand. Use any sago or tapioca pearls, available in the baking aisle or at Asian grocers."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "German Perlsago (e.g. Müllers Mühle, found at Kaufland and similar) or tapioca pearls from an Asia-Laden -- either works as a sago substitute."
     }
   },
   "Maizena cornflour": {
     "uk": {
       "status": "everyday",
       "note": "Brown & Polson -- the standard UK cornflour brand."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "Sold directly by Aubergine Foods. Everyday alternative: cornstarch -- the US calls it cornstarch, not cornflour -- e.g. Argo, the standard US brand."
+    },
+    "au": {
+      "status": "specialty",
+      "note": "Stocked by several South African grocers in Australia, e.g. The South African Shop and GS International Groceries. Note: unlike in the US, Australian \"cornflour\" already means cornstarch, so no relabelling is needed -- White Wings Cornflour is the everyday alternative."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "Directly confirmed: Maizena Corn Flour 500g is sold by Something From Home. Everyday alternative: Edmonds Fielders Cornflour -- New Zealand's classic cornflour brand."
+    },
+    "de": {
+      "status": "native",
+      "note": "Maizena is itself a mainstream German brand (Unilever) -- sold everywhere as \"Maizena Feine Speisestärke\". Buy it as named, nothing to substitute."
     }
   },
   "Maizena cornflour (cornstarch)": {
     "uk": {
       "status": "everyday",
       "note": "Brown & Polson -- the standard UK cornflour brand."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "Sold directly by Aubergine Foods. Everyday alternative: any US cornstarch, e.g. Argo, the standard brand -- this is the same product, just called cornflour in South Africa."
+    },
+    "au": {
+      "status": "specialty",
+      "note": "Stocked by several South African grocers in Australia, e.g. The South African Shop and GS International Groceries. Note: Australian \"cornflour\" already means cornstarch (same as in South Africa), so no relabelling is needed -- White Wings Cornflour is the everyday alternative."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "Directly confirmed: Maizena Corn Flour 500g is sold by Something From Home. In NZ, \"cornflour\" already means cornstarch, so no renaming needed. Everyday alternative: Edmonds Fielders Cornflour."
+    },
+    "de": {
+      "status": "native",
+      "note": "Maizena is itself a mainstream German brand (Unilever) -- sold everywhere as \"Maizena Feine Speisestärke\". Buy it as named, nothing to substitute."
     }
   },
   "Safford’s Bourbon vanilla extract": {
     "uk": {
       "status": "everyday",
       "note": "Any pure vanilla extract, e.g. Nielsen-Massey."
+    },
+    "us": {
+      "status": "everyday",
+      "note": "No confirmed US import route for this brand -- but \"Bourbon\" vanilla is a familiar US term too (it refers to Madagascar/Bourbon Islands origin, not the whiskey), so any pure vanilla extract works, e.g. Nielsen-Massey Madagascar Bourbon Vanilla Extract or McCormick pure vanilla extract."
+    },
+    "au": {
+      "status": "everyday",
+      "note": "No Australian importer found for this South African brand -- use any pure vanilla extract, e.g. Queen (an Australian brand, widely at Coles/Woolworths)."
+    },
+    "nz": {
+      "status": "everyday",
+      "note": "No NZ import route found for this South African brand. Use any pure vanilla extract, e.g. Heilala -- a well-regarded NZ/Pacific vanilla brand -- or Queen."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "Pure Bourbon vanilla extract isn't a standard German shelf item -- German baking mostly uses Vanillezucker (vanilla sugar) instead. For the real thing, Nielsen-Massey Madagascar Bourbon Vanilla Extract is available via specialty baking shops (e.g. ryan-s.de) and Amazon.de."
     }
   },
   "Nola full-egg mayonnaise (not salad dressing)": {
     "uk": {
       "status": "everyday",
       "note": "Any full-egg mayonnaise -- Hellmann's is the closest widely-available match in richness."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "Sold directly by Aubergine Foods. Everyday alternative: Hellmann's (called Best Foods west of the Rockies) Real Mayonnaise -- a genuine egg-based mayonnaise, as opposed to Miracle Whip, which actually is labeled \"salad dressing\" on US shelves, so the same distinction applies here."
+    },
+    "au": {
+      "status": "specialty",
+      "note": "Stocked by South African grocers in Australia, e.g. The South African Shop and South African Home Foods. Everyday alternative: a whole-egg mayonnaise such as Praise Whole Egg Mayonnaise, not a lighter \"salad dressing\" style."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "Strongly available -- Nola Mayonnaise is sold by Something From Home, SA Shop NZ, International Sweets NZ and Elite Meats Hamilton. Everyday alternative: Best Foods Real Mayonnaise (made with whole egg), not a lighter \"salad dressing\" style."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "Look for a product labelled \"Mayonnaise\" (not \"Salatcreme\" or \"Salatmayonnaise\", which are lower-fat dressings) -- e.g. Thomy Delikatess-Mayonnaise or Kühne, both real egg-yolk mayonnaise and widely stocked."
     }
   },
   "Rhodes baby gherkins or dill pickles": {
     "uk": {
       "status": "everyday",
       "note": "Any baby gherkins or dill pickles, supermarket own-brand is fine."
+    },
+    "us": {
+      "status": "everyday",
+      "note": "No confirmed South African import route found for this brand -- small tart gherkins/cornichons and dill pickles are both easy US supermarket items: Mt. Olive baby gherkins or cornichons for the gherkin option, Vlasic or Claussen for dill pickles."
+    },
+    "au": {
+      "status": "everyday",
+      "note": "No Australian importer found for the Rhodes brand -- use any baby gherkins or dill pickles, e.g. Masterfoods or a supermarket own-brand."
+    },
+    "nz": {
+      "status": "everyday",
+      "note": "No NZ import route found for Rhodes specifically. Use any jarred baby gherkins or dill pickles from the supermarket pickle aisle, e.g. Craig's or Always Fresh."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "Kühne is the classic German brand for this -- their Gewürzgurken (baby pickled gherkins) or Senfgurken/Dillgurken (mustard/dill pickles) are in every supermarket."
     }
   },
   "Nature’s Buzz raw honey": {
     "uk": {
       "status": "everyday",
       "note": "Any raw or clear honey."
+    },
+    "us": {
+      "status": "everyday",
+      "note": "No confirmed import route for this brand -- any raw or local honey works, e.g. Nature Nate's Raw Honey (a similarly named US brand, unrelated) or a local farmers'-market honey."
+    },
+    "au": {
+      "status": "everyday",
+      "note": "No Australian importer found for this South African brand -- use any raw or local honey, e.g. Capilano."
+    },
+    "nz": {
+      "status": "everyday",
+      "note": "No NZ import route found for this South African brand. New Zealand has its own excellent raw and manuka honey producers -- any local raw honey, e.g. Arataki or Airborne, works well."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "Ordinary raw/unfiltered honey, e.g. a Bio-Rohhonig from Alnatura or Breitsamer, found in the Bio aisle, a Reformhaus, or DM drugstore."
     }
   },
   "Exotic Foods sesame oil": {
     "uk": {
       "status": "everyday",
       "note": "Any toasted sesame oil, e.g. Clearspring or an Asian grocer's own-brand."
+    },
+    "us": {
+      "status": "everyday",
+      "note": "No confirmed import route for this brand -- any toasted sesame oil, e.g. Kadoya or La Tourangelle, sold in the international aisle of most US supermarkets or at any Asian grocery store."
+    },
+    "au": {
+      "status": "everyday",
+      "note": "No Australian importer found for this South African brand -- use any toasted or pure sesame oil, e.g. Chang's, from the Coles/Woolworths Asian aisle."
+    },
+    "nz": {
+      "status": "everyday",
+      "note": "No NZ import route found for this South African brand. Use any pure or toasted sesame oil, e.g. Lee Kum Kee or Chang's, from the supermarket or an Asian grocer."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "Toasted sesame oil (geröstetes Sesamöl) is a standard Asia-Laden item in German cities, and also on Amazon.de -- any brand works."
     }
   },
   "Tastic long-grain white rice": {
     "uk": {
       "status": "everyday",
       "note": "Any long-grain white rice, e.g. Tilda."
+    },
+    "us": {
+      "status": "specialty",
+      "note": "Sold directly by Aubergine Foods as \"Tastic Long Grain Parboiled Rice.\" Everyday alternative: since Tastic is a parboiled (\"easy-cook\") rice, the closest US match is a parboiled rice like Uncle Ben's Original Converted Rice, though any plain long-grain white rice such as Mahatma or Carolina also works."
+    },
+    "au": {
+      "status": "specialty",
+      "note": "Sold into Australia rebranded as \"Protea Rice\" by South African grocers such as Springbok Delights and South African Home Foods. Everyday alternative: any long-grain white rice, e.g. SunRice."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "Directly confirmed -- several Tastic rice varieties are sold by Something From Home. Everyday alternative: SunRice long-grain white rice, or a supermarket own-brand."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "Ordinary German long-grain white rice (Langkornreis), e.g. Oryza, Uncle Ben's or a supermarket own-brand."
     }
   },
   "Smoking material — wood chips, or Tastic rice + Huletts brown sugar + Joko tea": {
     "uk": {
       "status": "everyday",
       "note": "This recipe offers two smoking methods, both easy in the UK: wood chips for a smoker/BBQ are widely sold there (hardware shops, Amazon, BBQ suppliers); for the stovetop-in-a-pot method, use any long-grain rice in place of Tastic rice, any light or dark brown sugar (e.g. Tate & Lyle) in place of Huletts brown sugar, and any UK black tea (e.g. PG Tips or Yorkshire Tea) in place of Joko tea."
+    },
+    "us": {
+      "status": "everyday",
+      "note": "For a smoker or grill: wood chips are trivially available at any US hardware store, Walmart, or Amazon (e.g. Weber or Kingsford). For the stovetop method: any US long-grain rice (Mahatma, Carolina), light or dark brown sugar (Domino, C&H), and a plain black tea -- Lipton black tea bags, torn open, are the easiest everyday stand-in for Joko."
+    },
+    "au": {
+      "status": "everyday",
+      "note": "For a smoker or kettle BBQ: wood chips are sold at hardware/BBQ shops such as Bunnings (Heat Beads, Matador). For the stovetop method: any long-grain rice (or the Tastic-rebrand \"Protea Rice\" from a South African grocer), any brown sugar, and any black tea bags (Joko itself is stocked by The South African Shop) all work."
+    },
+    "nz": {
+      "status": "specialty",
+      "note": "For a smoker/BBQ: wood chips, including native manuka, are easy to find at Mitre 10 and Bunnings NZ. For the stovetop method: Tastic rice is sold by Something From Home (or sub SunRice), Joko Tea is also stocked there, and Huletts brown sugar can be swapped for Chelsea Brown Sugar."
+    },
+    "de": {
+      "status": "everyday",
+      "note": "For a smoker/BBQ: wood chips (Räucherchips) are widely sold at OBI, Hornbach and Amazon.de (e.g. Weber or Mr. BBQ brand). For the stovetop method: German long-grain rice, brauner Zucker (brown sugar, any brand), and a black tea such as Meßmer, a mainstream German brand."
     }
   }
 }
